@@ -1,0 +1,6 @@
+venv\Scripts\activate
+
+uvicorn app.main:app --reload
+python -m app.channels.telegram.bot
+
+python -m pip cache purge

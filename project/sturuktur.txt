@@ -1,0 +1,32 @@
+robot/
+│
+├── venv/                         # Virtual environment
+│
+├── app/
+│   │
+│   ├── main.py                   # FastAPI entry point
+│   │
+│   ├── api/                      # HTTP / API layer
+│   │   ├── __init__.py
+│   │   ├── chat.py               # Dashboard üçün chat oxuma
+│   │   └── company.py            # Company + API key logic
+│   │
+│   ├── channels/                 # Xarici platformalar
+│   │   └── telegram/
+│   │       ├── __init__.py
+│   │       └── bot.py             # Telegram bot (handle_text burada)
+│   │
+│   └── storage/                  # DATA + MEMORY layer
+│       ├── __init__.py
+│       ├── memory.py              # BÜTÜN read/write LOJİKASI
+│       │
+│       └── data/                  # YALNIZ JSON DATA
+│           ├── messages.json      # Bot ↔ user mesajları
+│           ├── customers.json     # Müştərilər (profil, psixologiya)
+│           └── companies.json     # Şirkətlər + api_key + role
+│
+├── .env                          # TELEGRAM_TOKEN və s.
+│
+├── requirements.txt              # Paketlər
+│
+└── README.md                     # (sonra yazılacaq)

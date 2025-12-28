@@ -1,0 +1,1312 @@
+[
+  {
+    "id": 1,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Qiymət neçəyədir?",
+    "timestamp": "2025-12-28T08:45:41.986894"
+  },
+  {
+    "id": 2,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Mesaj alındı ✅",
+    "timestamp": "2025-12-28T08:45:41.992897"
+  },
+  {
+    "id": 3,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Qiymət neçəyədir?",
+    "timestamp": "2025-12-28T08:45:42.285092"
+  },
+  {
+    "id": 4,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Salam 👋 Mesajınızı aldım.",
+    "timestamp": "2025-12-28T08:45:42.290097"
+  },
+  {
+    "id": 5,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Qiymət",
+    "timestamp": "2025-12-28T08:46:18.024107"
+  },
+  {
+    "id": 6,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Mesaj alındı ✅",
+    "timestamp": "2025-12-28T08:46:18.028110"
+  },
+  {
+    "id": 7,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Qiymət",
+    "timestamp": "2025-12-28T08:46:18.492246"
+  },
+  {
+    "id": 8,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Salam 👋 Mesajınızı aldım.",
+    "timestamp": "2025-12-28T08:46:18.497250"
+  },
+  {
+    "id": 9,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Qiymət neçəyədir,?",
+    "timestamp": "2025-12-28T08:52:32.445904"
+  },
+  {
+    "id": 10,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Mesaj alındı ✅",
+    "timestamp": "2025-12-28T08:52:32.450908"
+  },
+  {
+    "id": 11,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Qiymət neçəyədir,?",
+    "timestamp": "2025-12-28T08:52:32.745103"
+  },
+  {
+    "id": 12,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Salam 👋 Mesajınızı aldım.",
+    "timestamp": "2025-12-28T08:52:32.750107"
+  },
+  {
+    "id": 13,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Qiymət neçəyədir?",
+    "timestamp": "2025-12-28T08:52:57.730201"
+  },
+  {
+    "id": 14,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Mesaj alındı ✅",
+    "timestamp": "2025-12-28T08:52:57.738205"
+  },
+  {
+    "id": 15,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Qiymət neçəyədir?",
+    "timestamp": "2025-12-28T08:52:58.054397"
+  },
+  {
+    "id": 16,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Salam 👋 Mesajınızı aldım.",
+    "timestamp": "2025-12-28T08:52:58.059401"
+  },
+  {
+    "id": 17,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Qiymət neçəyədir?",
+    "timestamp": "2025-12-28T08:53:33.468486"
+  },
+  {
+    "id": 18,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Mesaj alındı ✅",
+    "timestamp": "2025-12-28T08:53:33.474489"
+  },
+  {
+    "id": 19,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Qiymət neçəyədir?",
+    "timestamp": "2025-12-28T08:53:33.798020"
+  },
+  {
+    "id": 20,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Salam 👋 Mesajınızı aldım.",
+    "timestamp": "2025-12-28T08:53:33.813028"
+  },
+  {
+    "id": 21,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Qiyməti neçədir?",
+    "timestamp": "2025-12-28T08:56:59.289237"
+  },
+  {
+    "id": 22,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Qiymətlər barədə məlumat verə bilərəm 🙂 Hansı məhsul maraqlıdır?",
+    "timestamp": "2025-12-28T08:56:59.315239"
+  },
+  {
+    "id": 23,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Qara gödəkçə var?",
+    "timestamp": "2025-12-28T09:03:19.701110"
+  },
+  {
+    "id": 24,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Xoş gəldiniz 👋 Nə ilə maraqlanırsınız?",
+    "timestamp": "2025-12-28T09:03:19.732129"
+  },
+  {
+    "id": 25,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Saatların qiyməti neçədir?",
+    "timestamp": "2025-12-28T09:03:41.929407"
+  },
+  {
+    "id": 26,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Qiymətlər barədə məlumat verə bilərəm 🙂 Hansı məhsul maraqlıdır?",
+    "timestamp": "2025-12-28T09:03:41.948420"
+  },
+  {
+    "id": 27,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "“Saatların qiyməti neçədir?”",
+    "timestamp": "2025-12-28T09:07:28.663289"
+  },
+  {
+    "id": 28,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Qiymətlər barədə məlumat verə bilərəm 🙂 Hansı məhsul maraqlıdır?",
+    "timestamp": "2025-12-28T09:07:28.681300"
+  },
+  {
+    "id": 29,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Saatların qiyməti neçədir?",
+    "timestamp": "2025-12-28T09:07:49.709818"
+  },
+  {
+    "id": 30,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Qiymətlər barədə məlumat verə bilərəm 🙂 Hansı məhsul maraqlıdır?",
+    "timestamp": "2025-12-28T09:07:49.727831"
+  },
+  {
+    "id": 31,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Qara gödəkçə almaq istəyirəm",
+    "timestamp": "2025-12-28T09:08:10.965730"
+  },
+  {
+    "id": 32,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Əladır 👍 Hansı modeli istəyirsiniz?",
+    "timestamp": "2025-12-28T09:08:11.026769"
+  },
+  {
+    "id": 33,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Gödəkçələrə baxıram",
+    "timestamp": "2025-12-28T09:08:25.830904"
+  },
+  {
+    "id": 34,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Xoş gəldiniz 👋 Nə ilə maraqlanırsınız?",
+    "timestamp": "2025-12-28T09:08:25.971998"
+  },
+  {
+    "id": 35,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Saatların qiyməti neçədir?",
+    "timestamp": "2025-12-28T09:12:36.403800"
+  },
+  {
+    "id": 36,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Qiymətlər barədə məlumat verə bilərəm 🙂 Hansı məhsul maraqlıdır?",
+    "timestamp": "2025-12-28T09:12:36.421813"
+  },
+  {
+    "id": 37,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Saatların qiyməti neçədir?",
+    "timestamp": "2025-12-28T09:13:13.152894"
+  },
+  {
+    "id": 38,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Qiymətlər barədə məlumat verə bilərəm 🙂 Hansı məhsul maraqlıdır?",
+    "timestamp": "2025-12-28T09:13:13.170907"
+  },
+  {
+    "id": 39,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "gödəkçə",
+    "timestamp": "2025-12-28T09:13:32.121785"
+  },
+  {
+    "id": 40,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Xoş gəldiniz 👋 Nə ilə maraqlanırsınız?",
+    "timestamp": "2025-12-28T09:13:32.139797"
+  },
+  {
+    "id": 41,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Qara gödəkçə almaq istəyirəm",
+    "timestamp": "2025-12-28T09:13:52.997367"
+  },
+  {
+    "id": 42,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Əladır 👍 Hansı modeli istəyirsiniz?",
+    "timestamp": "2025-12-28T09:13:53.015379"
+  },
+  {
+    "id": 43,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Qiyməti neçədir?",
+    "timestamp": "2025-12-28T09:14:04.049942"
+  },
+  {
+    "id": 44,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Qiymətlər barədə məlumat verə bilərəm 🙂 Hansı məhsul maraqlıdır?",
+    "timestamp": "2025-12-28T09:14:04.061952"
+  },
+  {
+    "id": 45,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Qara gödəkçə almaq istəyirəm",
+    "timestamp": "2025-12-28T09:17:41.868040"
+  },
+  {
+    "id": 46,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Əladır 👍 Hansı modeli istəyirsiniz?",
+    "timestamp": "2025-12-28T09:17:41.886051"
+  },
+  {
+    "id": 47,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Qara gödəkçə almaq istəyirəm",
+    "timestamp": "2025-12-28T09:19:49.107109"
+  },
+  {
+    "id": 48,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Əladır 👍 Hansı modeli istəyirsiniz?",
+    "timestamp": "2025-12-28T09:19:49.138128"
+  },
+  {
+    "id": 49,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Qiyməti neçədİr?",
+    "timestamp": "2025-12-28T09:19:59.669065"
+  },
+  {
+    "id": 50,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Qiymətlər barədə məlumat verə bilərəm 🙂 Hansı məhsul maraqlıdır?",
+    "timestamp": "2025-12-28T09:19:59.701085"
+  },
+  {
+    "id": 51,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Qara gödəkçə almaq istəyirəm",
+    "timestamp": "2025-12-28T09:24:38.557255"
+  },
+  {
+    "id": 52,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Əladır 👍 Gödəkçə üçün hansı modeli istəyirsiniz?",
+    "timestamp": "2025-12-28T09:24:38.785406"
+  },
+  {
+    "id": 53,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Qiyməti neçədİr?",
+    "timestamp": "2025-12-28T09:24:59.804215"
+  },
+  {
+    "id": 54,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Saat üçün qiymətlər model və keyfiyyətə görə dəyişir 🙂\nUcuzdan bahaya seçimlərimiz var.\nHansı modelə baxırsınız?",
+    "timestamp": "2025-12-28T09:24:59.819225"
+  },
+  {
+    "id": 55,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Qara gödəkçə almaq istəyirəm",
+    "timestamp": "2025-12-28T09:27:38.904644"
+  },
+  {
+    "id": 56,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Əladır 👍 Gödəkçə üçün hansı modeli istəyirsiniz?",
+    "timestamp": "2025-12-28T09:27:38.922657"
+  },
+  {
+    "id": 57,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Qiyməti neçədİr?",
+    "timestamp": "2025-12-28T09:27:59.225605"
+  },
+  {
+    "id": 58,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Saat üçün qiymətlər model və keyfiyyətə görə dəyişir 🙂\nUcuzdan bahaya seçimlərimiz var.\nHansı modelə baxırsınız?",
+    "timestamp": "2025-12-28T09:27:59.240616"
+  },
+  {
+    "id": 59,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Qara gödəkçə almaq istəyirəm",
+    "timestamp": "2025-12-28T09:36:14.567224"
+  },
+  {
+    "id": 60,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Əladır 👍 Gödəkçə üçün hansı modeli istəyirsiniz?",
+    "timestamp": "2025-12-28T09:36:14.590238"
+  },
+  {
+    "id": 61,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Qiyməti neçədir?",
+    "timestamp": "2025-12-28T09:36:42.124066"
+  },
+  {
+    "id": 62,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Gödəkçə üçün qiymətlər model və keyfiyyətə görə dəyişir 🙂\nUcuzdan bahaya seçimlərimiz var.\nHansı modelə baxırsınız?",
+    "timestamp": "2025-12-28T09:36:42.143081"
+  },
+  {
+    "id": 63,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Saatların qiyməti neçədir?",
+    "timestamp": "2025-12-28T09:37:05.641371"
+  },
+  {
+    "id": 64,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Saat üçün qiymətlər model və keyfiyyətə görə dəyişir 🙂\nUcuzdan bahaya seçimlərimiz var.\nHansı modelə baxırsınız?",
+    "timestamp": "2025-12-28T09:37:05.667388"
+  },
+  {
+    "id": 65,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Qara gödəkçə almaq istəyirəm",
+    "timestamp": "2025-12-28T09:37:23.721372"
+  },
+  {
+    "id": 66,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Əladır 👍 Gödəkçə üçün hansı modeli istəyirsiniz?",
+    "timestamp": "2025-12-28T09:37:23.744389"
+  },
+  {
+    "id": 67,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Saatların qiyməti neçədir?",
+    "timestamp": "2025-12-28T09:37:39.459362"
+  },
+  {
+    "id": 68,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Saat üçün qiymətlər model və keyfiyyətə görə dəyişir 🙂\nUcuzdan bahaya seçimlərimiz var.\nHansı modelə baxırsınız?",
+    "timestamp": "2025-12-28T09:37:39.486380"
+  },
+  {
+    "id": 69,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Qiyməti neçədir?",
+    "timestamp": "2025-12-28T09:37:45.278837"
+  },
+  {
+    "id": 70,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Saat üçün qiymətlər model və keyfiyyətə görə dəyişir 🙂\nUcuzdan bahaya seçimlərimiz var.\nHansı modelə baxırsınız?",
+    "timestamp": "2025-12-28T09:37:45.295849"
+  },
+  {
+    "id": 71,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Salam",
+    "timestamp": "2025-12-28T09:53:17.231681"
+  },
+  {
+    "id": 72,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Saat ilə maraqlanırsınız 🙂 Qiymət, model və ölçülər barədə məlumat verə bilərəm.",
+    "timestamp": "2025-12-28T09:53:17.274711"
+  },
+  {
+    "id": 73,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Qara gödəkçə almaq istəyirəm",
+    "timestamp": "2025-12-28T09:54:07.808544"
+  },
+  {
+    "id": 74,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Əladır 👍 Gödəkçə üçün ölçü və modeli deyin, sifarişi hazırlayaq.",
+    "timestamp": "2025-12-28T09:54:07.871586"
+  },
+  {
+    "id": 75,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Salam",
+    "timestamp": "2025-12-28T09:54:15.320847"
+  },
+  {
+    "id": 76,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Gödəkçə ilə maraqlanırsınız 🙂 Qiymət, model və ölçülər barədə məlumat verə bilərəm.",
+    "timestamp": "2025-12-28T09:54:15.343864"
+  },
+  {
+    "id": 77,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Qiyməti neçəyədir?",
+    "timestamp": "2025-12-28T09:54:57.786028"
+  },
+  {
+    "id": 78,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Gödəkçə üçün qiymətlər modelə görə dəyişir 🙂 Hansı modelə baxırsınız?",
+    "timestamp": "2025-12-28T09:54:57.806040"
+  },
+  {
+    "id": 79,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Almaq istəyirəm",
+    "timestamp": "2025-12-28T09:55:13.042511"
+  },
+  {
+    "id": 80,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Əladır 👍 Gödəkçə üçün ölçü və modeli deyin, sifarişi hazırlayaq.",
+    "timestamp": "2025-12-28T09:55:13.061525"
+  },
+  {
+    "id": 81,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Saatlara baxıram",
+    "timestamp": "2025-12-28T09:55:39.473290"
+  },
+  {
+    "id": 82,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Saat ilə maraqlanırsınız 🙂 Qiymət, model və ölçülər barədə məlumat verə bilərəm.",
+    "timestamp": "2025-12-28T09:55:39.533331"
+  },
+  {
+    "id": 83,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Qiyməti neçəyədir?",
+    "timestamp": "2025-12-28T09:55:53.093215"
+  },
+  {
+    "id": 84,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Saat üçün qiymətlər modelə görə dəyişir 🙂 Hansı modelə baxırsınız?",
+    "timestamp": "2025-12-28T09:55:53.116232"
+  },
+  {
+    "id": 85,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Salam",
+    "timestamp": "2025-12-28T10:17:55.051272"
+  },
+  {
+    "id": 86,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Saat ilə maraqlanırsınız 🙂\nQiymət, model və ölçülər barədə məlumat verə bilərəm.",
+    "timestamp": "2025-12-28T10:17:55.134326"
+  },
+  {
+    "id": 87,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Gödəkçələriniz var?",
+    "timestamp": "2025-12-28T10:18:20.916827"
+  },
+  {
+    "id": 88,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Gödəkçə ilə maraqlanırsınız 🙂\nQiymət, model və ölçülər barədə məlumat verə bilərəm.",
+    "timestamp": "2025-12-28T10:18:21.136975"
+  },
+  {
+    "id": 89,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "salam",
+    "timestamp": "2025-12-28T10:28:21.264502"
+  },
+  {
+    "id": 90,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Gödəkçə ilə maraqlanırsınız 🙂 Qiymət və modellər barədə deyə bilərəm.",
+    "timestamp": "2025-12-28T10:28:21.284514"
+  },
+  {
+    "id": 91,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Salam",
+    "timestamp": "2025-12-28T10:33:58.829074"
+  },
+  {
+    "id": 92,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Gödəkçə ilə maraqlanırsınız 🙂 Qiymət və modellər barədə deyə bilərəm.",
+    "timestamp": "2025-12-28T10:33:58.877104"
+  },
+  {
+    "id": 93,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Gödəkçələriniz var?",
+    "timestamp": "2025-12-28T10:40:18.271134"
+  },
+  {
+    "id": 94,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Gödəkçə ilə maraqlanırsınız 🙂 Qiymət və modellər barədə deyə bilərəm.",
+    "timestamp": "2025-12-28T10:40:18.344183"
+  },
+  {
+    "id": 95,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Salam 👋 Necə kömək edə bilərəm? 😊",
+    "timestamp": "2025-12-28T10:40:24.022673"
+  },
+  {
+    "id": 96,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Saatlara baxıram",
+    "timestamp": "2025-12-28T10:41:29.838842"
+  },
+  {
+    "id": 97,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Saat ilə maraqlanırsınız 🙂 Qiymət və modellər barədə deyə bilərəm.",
+    "timestamp": "2025-12-28T10:41:29.867862"
+  },
+  {
+    "id": 98,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Oldu 👍 Keçmişi sıfırladım.\nHansə məhsula baxmaq istəyirsiniz?",
+    "timestamp": "2025-12-28T10:41:42.576734"
+  },
+  {
+    "id": 99,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Qiyməti neçədir?",
+    "timestamp": "2025-12-28T10:41:59.534320"
+  },
+  {
+    "id": 100,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Xoş gəldiniz 👋 Hansı məhsula baxmaq istəyirsiniz?",
+    "timestamp": "2025-12-28T10:41:59.556337"
+  },
+  {
+    "id": 101,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Ayaqqabılarınız var?",
+    "timestamp": "2025-12-28T10:42:26.882718"
+  },
+  {
+    "id": 102,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Ayaqqabı ilə maraqlanırsınız 🙂 Qiymət və modellər barədə deyə bilərəm.",
+    "timestamp": "2025-12-28T10:42:26.908736"
+  },
+  {
+    "id": 103,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Salam 👋 Necə kömək edə bilərəm? 😊",
+    "timestamp": "2025-12-28T10:42:38.024899"
+  },
+  {
+    "id": 104,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Modelləri göstər",
+    "timestamp": "2025-12-28T10:42:46.547016"
+  },
+  {
+    "id": 105,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Ayaqqabı ilə maraqlanırsınız 🙂 Qiymət və modellər barədə deyə bilərəm.",
+    "timestamp": "2025-12-28T10:42:46.569031"
+  },
+  {
+    "id": 106,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Gödəkçə almaq istəyirəm",
+    "timestamp": "2025-12-28T10:43:31.194774"
+  },
+  {
+    "id": 107,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Əladır 👍 Gödəkçə üçün ölçü və modeli deyin.",
+    "timestamp": "2025-12-28T10:43:31.309851"
+  },
+  {
+    "id": 108,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Oldu 👍 Keçmişi sıfırladım.\nHansə məhsula baxmaq istəyirsiniz?",
+    "timestamp": "2025-12-28T10:43:43.782930"
+  },
+  {
+    "id": 109,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Salam 👋 Necə kömək edə bilərəm? 😊",
+    "timestamp": "2025-12-28T10:44:34.602163"
+  },
+  {
+    "id": 110,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Qiyməti neçəyədir?",
+    "timestamp": "2025-12-28T10:44:45.528305"
+  },
+  {
+    "id": 111,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Xoş gəldiniz 👋 Hansı məhsula baxmaq istəyirsiniz?",
+    "timestamp": "2025-12-28T10:44:45.550320"
+  },
+  {
+    "id": 112,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "⭐ Rəylər",
+    "timestamp": "2025-12-28T11:05:51.064050"
+  },
+  {
+    "id": 113,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Xoş gəldiniz 👋 Hansı məhsula baxmaq istəyirsiniz?",
+    "timestamp": "2025-12-28T11:05:51.085063"
+  },
+  {
+    "id": 114,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Salam 👋 Buyurun, necə kömək edə bilərəm? 😊",
+    "timestamp": "2025-12-28T11:05:54.461965"
+  },
+  {
+    "id": 115,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Gödəkçə lazımdır",
+    "timestamp": "2025-12-28T11:06:03.887021"
+  },
+  {
+    "id": 116,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Gödəkçə ilə maraqlanırsınız 🙂 Qiymət və modellər barədə deyə bilərəm.",
+    "timestamp": "2025-12-28T11:06:03.941057"
+  },
+  {
+    "id": 117,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Bayaq danışdığımız məhsuldan qalıb?",
+    "timestamp": "2025-12-28T11:06:58.874465"
+  },
+  {
+    "id": 118,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Gödəkçə ilə maraqlanırsınız 🙂 Qiymət və modellər barədə deyə bilərəm.",
+    "timestamp": "2025-12-28T11:06:58.949515"
+  },
+  {
+    "id": 119,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Salam 👋 Buyurun, necə kömək edə bilərəm? 😊",
+    "timestamp": "2025-12-28T11:16:44.845187"
+  },
+  {
+    "id": 120,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Salam 👋 Buyurun, necə kömək edə bilərəm? 😊",
+    "timestamp": "2025-12-28T11:16:45.082346"
+  },
+  {
+    "id": 121,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Salam 👋 Buyurun, necə kömək edə bilərəm? 😊",
+    "timestamp": "2025-12-28T11:16:45.273473"
+  },
+  {
+    "id": 122,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Salam 👋 Buyurun, necə kömək edə bilərəm? 😊",
+    "timestamp": "2025-12-28T11:16:45.457398"
+  },
+  {
+    "id": 123,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Gödəkçə lazımdır",
+    "timestamp": "2025-12-28T11:16:57.694338"
+  },
+  {
+    "id": 124,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Gödəkçə ilə maraqlanırsınız 🙂 Qiymət və modellər barədə deyə bilərəm.",
+    "timestamp": "2025-12-28T11:16:57.896471"
+  },
+  {
+    "id": 125,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Salam 👋 Buyurun, necə kömək edə bilərəm? 😊",
+    "timestamp": "2025-12-28T11:17:07.725626"
+  },
+  {
+    "id": 126,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Bayaq danışdığımız məhsuldan qalıb?",
+    "timestamp": "2025-12-28T11:17:16.546871"
+  },
+  {
+    "id": 127,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Gödəkçə ilə maraqlanırsınız 🙂 Qiymət və modellər barədə deyə bilərəm.",
+    "timestamp": "2025-12-28T11:17:16.594901"
+  },
+  {
+    "id": 128,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Salam 👋\nBəli, bayaq gödəkçə ilə maraqlanırdınız 🙂\nDavam edək?",
+    "timestamp": "2025-12-28T11:23:25.296900"
+  },
+  {
+    "id": 129,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "5106471763",
+    "username": "RegionBar",
+    "role": "user",
+    "text": "Xeyir",
+    "timestamp": "2025-12-28T11:23:34.085761"
+  },
+  {
+    "id": 130,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Gödəkçə ilə maraqlanırsınız 🙂 Qiymət və modellər barədə deyə bilərəm.",
+    "timestamp": "2025-12-28T11:23:34.119784"
+  },
+  {
+    "id": 131,
+    "company_id": "demo_company",
+    "platform": "telegram",
+    "user_id": "bot",
+    "username": "SmartSaleBot",
+    "role": "bot",
+    "text": "Salam 👋\nBəli, bayaq gödəkçə ilə maraqlanırdınız 🙂\nDavam edək?",
+    "timestamp": "2025-12-28T11:23:44.207693"
+  }
+]
