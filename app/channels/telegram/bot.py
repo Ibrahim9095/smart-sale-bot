@@ -1,7 +1,11 @@
 import os
+import random
+import asyncio
+from datetime import datetime
 from dotenv import load_dotenv
 
-from telegram import Update
+from telegram import Update, ReplyKeyboardMarkup
+from telegram.request import HTTPXRequest
 from telegram.ext import (
     ApplicationBuilder,
     MessageHandler,
@@ -9,18 +13,17 @@ from telegram.ext import (
     filters,
 )
 
+# 🔹 MEMORY FUNKSİYALARI
 from app.storage.memory import (
-    add_message,
     add_customer_if_not_exists,
-    detect_intent,
+    save_message,
+    set_operator_handoff,
+    is_operator_handoff_active,
+    update_customer_psychology,
+    update_customer_sales,
     update_customer_intent,
-    detect_interest,
-    add_customer_interest,
-    get_customers,
-    detect_sales_stage,
-    update_sales_stage,
-    build_bot_reply,
-    reset_customer_memory,
+    update_customer_relationship,
+    get_customer_brain
 )
 
 # ==============================
@@ -29,210 +32,281 @@ from app.storage.memory import (
 load_dotenv()
 
 BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+OPERATOR_CHAT_ID = int(os.getenv("OPERATOR_CHAT_ID", 0))
+
 if not BOT_TOKEN:
-    raise RuntimeError("❌ TELEGRAM_BOT_TOKEN tapılmadı (.env yoxla)")
+    raise RuntimeError("❌ TELEGRAM_BOT_TOKEN tapılmadı")
 
 # ==============================
-# SMART RESET CONFIG
+# MENU
 # ==============================
+CHAT_MENU = ReplyKeyboardMarkup(
+    [
+        ["❓ Sualım var"],
+        ["📞 Operatorla danış"],
+        ["👋 Sağ ol"]
+    ],
+    resize_keyboard=True
+)
 
-SOFT_GREETINGS = [
-    "salam",
-    "salamlar",
-    "salam 🙂",
-    "salam 👋",
-    "hello",
-    "hi",
+# ==============================
+# OPERATOR KEYWORDS
+# ==============================
+OPERATOR_KEYWORDS = [
+    "operator",
+    "canlı",
+    "insan",
+    "menecer",
+    "satıcı",
+    "📞"
 ]
 
-HARD_RESET_KEYWORDS = [
-    "başqa məhsul",
-    "fikrimi dəyişdim",
-    "yenidən başlayaq",
-    "yenidən",
-    "sıfırla",
-    "restart",
-]
+# ==============================
+# AI RESPONSE (sadə)
+# ==============================
+def generate_response(text: str) -> str:
+    t = text.lower()
 
-def detect_reset_type(text: str) -> str:
-    t = text.lower().strip()
+    if "salam" in t:
+        return "Salam! Necəsiniz? 😊"
+    if "necəsən" in t:
+        return "Yaxşıyam, siz necəsiniz?"
+    if "sağ ol" in t or "təşəkkür" in t:
+        return "Rica edirəm 🙌"
 
-    for k in HARD_RESET_KEYWORDS:
-        if k in t:
-            return "hard"
-
-    if t in SOFT_GREETINGS:
-        return "soft"
-
-    return "none"
+    return random.choice([
+        "Sizi anladım. Bir az da izah edə bilərsiniz?",
+        "Maraqlıdır. Davam edin.",
+        "Bu mövzuda düşünürəm."
+    ])
 
 # ==============================
-# HANDLER
+# PSİXOLOJİ ANALİZİ
+# ==============================
+def analyze_psychology(text: str) -> dict:
+    """Mesajdan psixoloji vəziyyəti analiz et"""
+    text_lower = text.lower()
+    
+    anger_words = ["pis", "axmaq", "idiot", "ləğv", "bərbad", "narahat", "acıqlı"]
+    anger_level = sum(1 for word in anger_words if word in text_lower)
+    
+    stress_words = ["kömək", "təcili", "dərhal", "acil", "problem", "çətin"]
+    stress_level = sum(1 for word in stress_words if word in text_lower)
+    
+    positive_words = ["yaxşı", "əla", "mükəmməl", "təşəkkür", "sağ ol", "sevdim"]
+    happiness_level = sum(1 for word in positive_words if word in text_lower)
+    
+    # Ümumi mood
+    if anger_level > 2:
+        mood = "angry"
+    elif stress_level > 2:
+        mood = "stressed"
+    elif happiness_level > 1:
+        mood = "positive"
+    else:
+        mood = "neutral"
+    
+    return {
+        "current_mood": mood,
+        "emotional_state": {
+            "anger_level": min(10, anger_level * 2),
+            "stress_level": min(10, stress_level * 2),
+            "happiness_level": min(10, happiness_level * 3),
+            "patience_level": max(1, 5 - anger_level)
+        }
+    }
+
+# ==============================
+# NİYYƏT ANALİZİ
+# ==============================
+def analyze_intent(text: str) -> dict:
+    """Mesajdan niyyəti analiz et"""
+    text_lower = text.lower()
+    
+    intent = "support"
+    interests = []
+    
+    # Satış niyyəti
+    sales_words = ["qiymət", "almaq", "satın", "məhsul", "endirim", "kampaniya"]
+    if any(word in text_lower for word in sales_words):
+        intent = "sales_inquiry"
+        interests.append("pricing")
+    
+    # Problem niyyəti
+    problem_words = ["problem", "şikayət", "pis", "kömək", "yararsız"]
+    if any(word in text_lower for word in problem_words):
+        intent = "complaint"
+        interests.append("support")
+    
+    # Sual niyyəti
+    question_words = ["necə", "nə", "niyə", "harda", "nə vaxt", "kim"]
+    if any(word in text_lower for word in question_words) or "?" in text:
+        intent = "question"
+        interests.append("information")
+    
+    return {
+        "current_intent": intent,
+        "interests": interests
+    }
+
+# ==============================
+# MAIN HANDLER (TƏK AXIN)
 # ==============================
 async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    message = update.message
     user = update.effective_user
-    text = update.message.text
 
-    company_id = "demo_company"
+    if not message or not message.text:
+        return
+
+    text = message.text.strip()
+    if not text:
+        return
+
+    company_id = "real_company"
     platform = "telegram"
     user_id = str(user.id)
-    username = user.username or user.first_name or "unknown"
+    username = user.username or user.first_name or "İstifadəçi"
 
-    print("🔥 HANDLE_TEXT:", text)
-
-    # 1️⃣ CUSTOMER tap / yarat
+    # 1️⃣ CUSTOMER AUTO-CREATE
     add_customer_if_not_exists(
         company_id=company_id,
         platform=platform,
         user_id=user_id,
-        username=username,
+        username=username
     )
 
-    # ==============================
-    # 🧠 SMART RESET + CONTEXTUAL SALAM
-    # ==============================
-    reset_type = detect_reset_type(text)
-
-    customers = get_customers(company_id=company_id)
-    last_interest = None
-
-    for c in customers:
-        if c["user_id"] == user_id and c["platform"] == platform:
-            last_interest = c.get("psychology", {}).get("active_interest")
-            break
-
-    # 🔴 HARD RESET
-    if reset_type == "hard":
-        reset_customer_memory(
-            company_id=company_id,
-            platform=platform,
-            user_id=user_id,
-        )
-
-        bot_text = (
-            "Oldu 👍\n"
-            "İndi yeni mövzudan başlayaq.\n"
-            "Hansı məhsula baxmaq istəyirsiniz?"
-        )
-
-        add_message(
-            company_id=company_id,
-            platform=platform,
-            user_id="bot",
-            role="bot",
-            username="SmartSaleBot",
-            text=bot_text,
-        )
-
-        await update.message.reply_text(bot_text)
+    # 2️⃣ OPERATOR AKTİVDİRSƏ → BOT SUSUR
+    if is_operator_handoff_active(company_id, platform, user_id):
         return
 
-    # 🟡 SOFT SALAM – KEÇMİŞİ XATIRLA
-    if reset_type == "soft":
-        if last_interest:
-            bot_text = (
-                f"Salam 👋\n"
-                f"Bəli, bayaq {last_interest} ilə maraqlanırdınız 🙂\n"
-                f"Davam edək?"
+    # 3️⃣ OPERATORA KEÇİD
+    if any(k in text.lower() for k in OPERATOR_KEYWORDS):
+        set_operator_handoff(company_id, platform, user_id, True)
+
+        await message.reply_text(
+            "👨‍💼 Sizi operatora yönləndirdik.\n"
+            "Zəhmət olmasa gözləyin."
+        )
+
+        if OPERATOR_CHAT_ID:
+            await context.bot.send_message(
+                chat_id=OPERATOR_CHAT_ID,
+                text=(
+                    "🔔 OPERATOR HANDOFF\n\n"
+                    f"👤 {username}\n"
+                    f"🆔 {user_id}\n"
+                    f"💬 {text}"
+                )
             )
-        else:
-            bot_text = "Salam 👋 Buyurun, necə kömək edə bilərəm? 😊"
-
-        add_message(
-            company_id=company_id,
-            platform=platform,
-            user_id="bot",
-            role="bot",
-            username="SmartSaleBot",
-            text=bot_text,
-        )
-
-        await update.message.reply_text(bot_text)
         return
 
-    # ==============================
-    # 2️⃣ USER mesajını saxla
-    # ==============================
-    add_message(
+    # 4️⃣ PSİXOLOJİ VƏ NİYYƏT ANALİZİ
+    psychology_data = analyze_psychology(text)
+    intent_data = analyze_intent(text)
+    
+    # 5️⃣ SATIŞ POTENSİALI
+    customer_brain = get_customer_brain(user_id)
+    message_count = customer_brain.get("behavior", {}).get("message_count", 0)
+    
+    # Lead score hesabla
+    lead_score = min(100, message_count * 5)
+    if psychology_data["current_mood"] == "positive":
+        lead_score += 20
+    elif psychology_data["current_mood"] == "angry":
+        lead_score -= 30
+    
+    # Satış məlumatları
+    sales_data = {
+        "lead_score": lead_score,
+        "sales_stage": "warm" if lead_score > 50 else "cold",
+        "conversion_likelihood": lead_score
+    }
+    
+    # Münasibət məlumatları
+    relationship_data = {
+        "satisfaction_level": 7 if psychology_data["current_mood"] == "positive" else 5
+    }
+    
+    # 6️⃣ MEMORY YENİLƏ
+    update_customer_psychology(
         company_id=company_id,
         platform=platform,
         user_id=user_id,
-        role="user",
-        username=username,
-        text=text,
+        psychology_data=psychology_data
     )
-
-    # ==============================
-    # 3️⃣ INTENT
-    # ==============================
-    intent = detect_intent(text)
+    
     update_customer_intent(
         company_id=company_id,
         platform=platform,
         user_id=user_id,
-        intent=intent,
+        intent_data=intent_data
     )
-
-    # ==============================
-    # 4️⃣ INTEREST
-    # ==============================
-    active_interest = None
-
-    interest_now = detect_interest(text)
-    if interest_now:
-        active_interest = interest_now
-        add_customer_interest(
-            company_id=company_id,
-            platform=platform,
-            user_id=user_id,
-            interest=interest_now,
-        )
-        print("🎯 ACTIVE INTEREST (new):", active_interest)
-
-    if not active_interest:
-        active_interest = last_interest
-
-    # ==============================
-    # 5️⃣ SALES STAGE
-    # ==============================
-    stage = detect_sales_stage(intent, active_interest)
-    update_sales_stage(
+    
+    update_customer_sales(
         company_id=company_id,
         platform=platform,
         user_id=user_id,
-        stage=stage,
+        sales_data=sales_data
     )
-    print("🧭 SALES STAGE:", stage)
-
-    # ==============================
-    # 6️⃣ BOT REPLY
-    # ==============================
-    bot_text = build_bot_reply(stage, active_interest)
-
-    if not bot_text:
-        bot_text = "Buyurun 😊 Necə kömək edə bilərəm?"
-
-    # ==============================
-    # 7️⃣ BOT mesajını saxla
-    # ==============================
-    add_message(
+    
+    update_customer_relationship(
         company_id=company_id,
         platform=platform,
-        user_id="bot",
-        role="bot",
-        username="SmartSaleBot",
-        text=bot_text,
+        user_id=user_id,
+        relationship_data=relationship_data
+    )
+    
+    # 7️⃣ THINKING UX
+    await context.bot.send_chat_action(
+        chat_id=message.chat_id,
+        action="typing"
+    )
+    await asyncio.sleep(random.uniform(1.2, 2.0))
+
+    # 8️⃣ RESPONSE
+    response = generate_response(text)
+
+    # 9️⃣ MESSAGE SAVE
+    save_message(
+        user_id=user_id,
+        message=text,
+        response=response,
+        company_id=company_id,
+        platform=platform,
+        username=username
     )
 
-    await update.message.reply_text(bot_text)
+    # 🔟 SEND
+    await message.reply_text(response, reply_markup=CHAT_MENU)
 
 # ==============================
 # START
 # ==============================
 def main():
-    print("🤖 Telegram bot START OLDU (SMART CONTEXT BRAIN)")
-    app = ApplicationBuilder().token(BOT_TOKEN).build()
-    app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_text))
+    print("🤖 BOT STARTED")
+    print("🧠 Memory: ACTIVE")
+    print("👥 Operator Handoff: ACTIVE")
+    print("=" * 40)
+
+    request = HTTPXRequest(
+        connect_timeout=30,
+        read_timeout=30,
+        write_timeout=30,
+        pool_timeout=30,
+    )
+
+    app = (
+        ApplicationBuilder()
+        .token(BOT_TOKEN)
+        .request(request)
+        .build()
+    )
+
+    app.add_handler(
+        MessageHandler(filters.TEXT & ~filters.COMMAND, handle_text)
+    )
+
     app.run_polling()
 
 if __name__ == "__main__":

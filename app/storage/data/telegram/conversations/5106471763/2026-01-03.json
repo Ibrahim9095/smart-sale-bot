@@ -1,0 +1,98 @@
+[
+  {
+    "timestamp": "2026-01-03T01:13:29.865789",
+    "user_message": "Salam axşamınız xeyir",
+    "bot_response": "Salam! Necəsiniz? 😊",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-03T01:14:26.834607",
+    "user_message": "Mənim adım ibrahimdir",
+    "bot_response": "Bu mövzuda düşünürəm.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-03T01:15:03.793696",
+    "user_message": "How old are you",
+    "bot_response": "Sizi anladım. Bir az da izah edə bilərsiniz?",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-03T01:16:16.880138",
+    "user_message": "❓ Sualım var",
+    "bot_response": "Bu mövzuda düşünürəm.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-03T01:17:34.538027",
+    "user_message": "Mən məhsul almaq istəyirəm",
+    "bot_response": "Bu mövzuda düşünürəm.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-03T01:18:20.366048",
+    "user_message": "Mənə niyə kömək etmirsiniz?",
+    "bot_response": "Sizi anladım. Bir az da izah edə bilərsiniz?",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-03T01:18:41.823439",
+    "user_message": "Dərhal mənə kömək edin",
+    "bot_response": "Maraqlıdır. Davam edin.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-03T01:18:53.470219",
+    "user_message": "😡",
+    "bot_response": "Sizi anladım. Bir az da izah edə bilərsiniz?",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-03T01:19:26.735496",
+    "user_message": "Offf",
+    "bot_response": "Bu mövzuda düşünürəm.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-03T01:19:41.153848",
+    "user_message": "Şikayət",
+    "bot_response": "Sizi anladım. Bir az da izah edə bilərsiniz?",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-03T01:20:09.633898",
+    "user_message": "😁",
+    "bot_response": "Sizi anladım. Bir az da izah edə bilərsiniz?",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-03T01:20:16.867730",
+    "user_message": "Şikayət",
+    "bot_response": "Bu mövzuda düşünürəm.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-03T01:20:29.590312",
+    "user_message": "Çox pissən",
+    "bot_response": "Maraqlıdır. Davam edin.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-03T01:20:40.315775",
+    "user_message": "Offf",
+    "bot_response": "Bu mövzuda düşünürəm.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-03T03:05:04.149836",
+    "user_message": "❓ Sualım var",
+    "bot_response": "Bu mövzuda düşünürəm.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-03T03:12:42.352796",
+    "user_message": "Çox əsəbiyəm, xidmətiniz bərbaddır",
+    "bot_response": "Maraqlıdır. Davam edin.",
+    "message_type": "text"
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "intents": [
+    "greeting",
+    "buy",
+    "complain"
+  ],
+  "interests": [],
+  "last_intent": "buy",
+  "current_goal": "",
+  "pain_points": [],
+  "updated_at": "2026-01-03T03:12:42.337785",
+  "current_intent": "support"
+}
