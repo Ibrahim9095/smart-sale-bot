@@ -1,17 +1,7 @@
 {
-  "lead_score": 75,
-  "stage": "cold",
-  "last_offer": null,
-  "buying_signals": [
-    {
-      "timestamp": "2026-01-03T01:17:34.492997",
-      "signal": "Mən məhsul almaq istəyirəm",
-      "type": "buying_interest"
-    }
-  ],
-  "price_sensitivity": "unknown",
-  "estimated_value": 0,
-  "updated_at": "2026-01-03T03:12:42.337785",
+  "lead_score": 100,
   "sales_stage": "warm",
-  "conversion_likelihood": 75
+  "conversion_likelihood": 100,
+  "updated_at": "2026-01-08T16:16:22.072180",
+  "sales_potential": "medium"
 }

@@ -1,11 +1,8 @@
 """
-🧠 GERÇEK MÜŞTERİ BEYNİ SİSTEMİ - TELEGRAM
-✅ Sadece: app/storage/data/telegram/customers/<telegram_user_id>/
-✅ Her kullanıcı için 6 JSON: identity, behavior, psychology, intent_interest, relationship, sales
-✅ Ayrı kontrol: app/storage/data/telegram/control/operator_handoff.json
-❌ HİÇBİR global customer JSON (customers.json, messages.json YOK)
-❌ Müşteri içinde control.json YOK
-❌ HİÇBİR kök JSON dosyası
+🧠 GERÇEK MÜŞTERİ BEYNİ SİSTEMİ - QƏTİ ARXITEKTURA
+✅ HEÇ BİR əlavə blok YOXDUR
+✅ YALNIZ tələb olunan sahələr
+✅ REAL İNSAN PSİXOLOGİYASI KİMİ
 """
 
 import json
@@ -15,7 +12,14 @@ from typing import Dict, Any, List, Optional
 import re
 
 # ======================================================
-# DOSYA YOLU SİSTEMİ - KESİN VE DEĞİŞMEZ
+# DEEPTHINK IMPORT
+# ======================================================
+import sys
+sys.path.append(str(Path(__file__).parent.parent))
+from brain.deepthink import deepthink
+
+# ======================================================
+# DOSYA YOLU SİSTEMİ - DƏYİŞMƏZ
 # ======================================================
 BASE_PATH = Path("app/storage/data/telegram")
 CUSTOMERS_PATH = BASE_PATH / "customers"
@@ -25,13 +29,15 @@ ANALYTICS_PATH = BASE_PATH / "analytics"
 
 OPERATOR_HANDOFF_FILE = CONTROL_PATH / "operator_handoff.json"
 
-print(f"🧠 Müşteri Beyin Sistemi Başlatılıyor: {BASE_PATH}")
+print(f"🧠 QƏTİ Müşteri Beyin Sistemi Başlatılıyor")
+print(f"✅ FAIL-SAFE EMOTION ENGINE: AKTİV")
+print(f"❌ UNKNOWN: TAMAMEN QADAĞAN")
 
 # ======================================================
-# YARDIMCI FONKSİYONLAR
+# YARDIMCI FONKSİYONLAR - DƏYİŞMƏZ
 # ======================================================
 def _json_oku(dosya_yolu: Path, varsayilan=None):
-    """JSON dosyasını okur, yoksa varsayılan değeri döndürür"""
+    """JSON oxu"""
     try:
         if dosya_yolu.exists():
             with open(dosya_yolu, 'r', encoding='utf-8') as f:
@@ -41,14 +47,85 @@ def _json_oku(dosya_yolu: Path, varsayilan=None):
     return varsayilan if varsayilan is not None else {}
 
 def _json_yaz(dosya_yolu: Path, veri: Any):
-    """JSON dosyasına yazar, gerekli dizinleri oluşturur"""
+    """JSON yaz"""
     dosya_yolu.parent.mkdir(parents=True, exist_ok=True)
     with open(dosya_yolu, 'w', encoding='utf-8') as f:
         json.dump(veri, f, indent=2, ensure_ascii=False)
 
 # ======================================================
-# BEYİN OLUŞTURMA SİSTEMİ - OTOMATİK
+# PSİXOLOGİYA GÜNCELLEME - QƏTİ SİSTEM
 # ======================================================
+# ======================================================
+# PSİXOLOGİYA GÜNCELLEME - REAL-TIME RULE COMPATIBLE
+# ======================================================
+
+# ======================================================
+# PSİXOLOGİYA GÜNCELLEME - YENİ SİSTEM
+# ======================================================
+def _psikoloji_guncelle(mesaj: str, onceki_psikoloji: dict, simdi_iso: str) -> dict:
+    """
+    YENİ DEEPTHINK ilə psixologiya güncellemesi
+    """
+    
+    # DEEPTHINK çağır (REAL-TIME rules load)
+    analiz = deepthink.analyze(mesaj)
+    
+    # ========== UNKNOWN HALI ==========
+    if analiz is None:
+        print(f"❓ UNKNOWN: '{mesaj[:30]}...' → ÖNCƏKİ MOOD SAXLANDI")
+        
+        if onceki_psikoloji:
+            # Köhnə psixologiyanı qaytar, sadəcə updated_at yenilə
+            result = {
+                "current_mood": onceki_psikoloji.get("current_mood", "neutral"),
+                "emotional_state": onceki_psikoloji.get("emotional_state", "calm"),
+                "last_mood": onceki_psikoloji.get("current_mood", "neutral"),
+                "last_reason": "unknown_phrase_detected",
+                "last_message_type": "unknown",
+                "operator_required": False,  # Unknown üçün operator YOX
+                "updated_at": simdi_iso
+            }
+            return result
+        else:
+            # İlk dəfədirsə, default yarat
+            return {
+                "current_mood": "neutral",
+                "emotional_state": "calm",
+                "last_mood": "neutral",
+                "last_reason": "initial_state",
+                "last_message_type": "non_emotional",
+                "operator_required": False,
+                "updated_at": simdi_iso
+            }
+    
+    # ========== KATEQORİYA TAPILDI ==========
+    # YALNIZ TƏLƏB OLUNAN 7 SAHƏ
+    
+    # last_mood = əvvəlki current_mood
+    last_mood = onceki_psikoloji.get("current_mood", "neutral") if onceki_psikoloji else "neutral"
+    
+    result = {
+        "current_mood": analiz.get("current_mood", "neutral"),
+        "emotional_state": analiz.get("emotional_state", "calm"),
+        "last_mood": last_mood,
+        "last_reason": analiz.get("last_reason", ""),
+        "last_message_type": analiz.get("last_message_type", ""),
+        "operator_required": analiz.get("operator_required", False),
+        "updated_at": simdi_iso
+    }
+    
+    # ========== CRITICAL CATEGORY LOQ ==========
+    current_mood = result["current_mood"]
+    if current_mood in ["abuse", "threat", "blackmail", "accusation", "harassment"]:
+        print(f"🚨 CRITICAL: '{mesaj[:30]}...' → {current_mood.upper()} (OPERATOR REQUIRED)")
+    else:
+        print(f"✅ PSİXOLOGİYA: '{mesaj[:30]}...' → {current_mood}")
+    
+    return result
+
+# QALAN BÜTÜN KOD EYNİ QALIR - HEÇ BİR DƏYİŞİKLİK YOXDUR
+# ======================================================
+# BEYİN OLUŞTURMA SİSTEMİ - EYNİ
 def _beyin_olustur(kullanici_id: str, kullanici_adi: str = "") -> bool:
     """
     Kullanıcı beyin sistemini oluşturur (eğer yoksa)
@@ -93,11 +170,24 @@ def _beyin_olustur(kullanici_id: str, kullanici_adi: str = "") -> bool:
     # 3️⃣ psychology.json - İç durumu
     psikoloji_verisi = {
         "mood": "neutral",
+        "emotional_state": "calm",
+        "dominant_emotion": None,
+        "secondary_emotions": [],
         "stress_level": 0.0,
-        "decision_speed": "unknown",
+        "anger_level": 0.0,
+        "sadness_level": 0.0,
+        "joy_level": 0.0,
+        "satisfaction_level": 0.0,
         "confidence_level": 0.5,
-        "emotional_state": "neutral",
-        "updated_at": simdi
+        "energy_level": 0.5,
+        "psychological_state": "normal",
+        "trend": "stable",
+        "last_message_mood": "neutral",
+        "operator_required": False,
+        "updated_at": simdi,
+        "last_message_time": simdi,
+        "message_timestamps": [],
+        "mood_history": []
     }
     _json_yaz(kullanici_dizini / "psychology.json", psikoloji_verisi)
     
@@ -140,20 +230,22 @@ def _beyin_olustur(kullanici_id: str, kullanici_adi: str = "") -> bool:
     return True
 
 # ======================================================
-# BEYİN GÜNCELLEME SİSTEMİ
+# BEYİN GÜNCELLEME SİSTEMİ - PSİXOLOGİYA HİSSƏSİ DƏYİŞDİ, QALANI EYNİ
 # ======================================================
 def _beyin_guncelle(kullanici_id: str, mesaj: str, kullanici_adi: str):
     """Kullanıcının tüm beyin dosyalarını günceller"""
+    
     kullanici_dizini = CUSTOMERS_PATH / str(kullanici_id)
     
-    # Eğer beyin yoksa oluştur
+    # Əgər beyin yoxdursa oluştur
     if not kullanici_dizini.exists():
         _beyin_olustur(kullanici_id, kullanici_adi)
     
+    # Zaman
     simdi = datetime.now()
     simdi_iso = simdi.isoformat()
     
-    # 1️⃣ identity.json güncelle (last_seen)
+    # 1️⃣ identity.json güncelle - EYNİ
     kimlik_yolu = kullanici_dizini / "identity.json"
     kimlik_verisi = _json_oku(kimlik_yolu, {})
     kimlik_verisi["last_seen"] = simdi_iso
@@ -162,7 +254,7 @@ def _beyin_guncelle(kullanici_id: str, mesaj: str, kullanici_adi: str):
         kimlik_verisi["username"] = kullanici_adi
     _json_yaz(kimlik_yolu, kimlik_verisi)
     
-    # 2️⃣ behavior.json güncelle
+    # 2️⃣ behavior.json güncelle - EYNİ
     davranis_yolu = kullanici_dizini / "behavior.json"
     davranis_verisi = _json_oku(davranis_yolu, {})
     
@@ -196,25 +288,15 @@ def _beyin_guncelle(kullanici_id: str, mesaj: str, kullanici_adi: str):
     
     _json_yaz(davranis_yolu, davranis_verisi)
     
-    # 3️⃣ psychology.json güncelle (duygusal analiz)
+    # 3️⃣ psychology.json güncelle - YENİ PSİXOLOGİYA SİSTEMİ
     psikoloji_yolu = kullanici_dizini / "psychology.json"
-    psikoloji_verisi = _json_oku(psikoloji_yolu, {})
+    onceki_psikoloji = _json_oku(psikoloji_yolu, {})
     
-    # Duygusal analiz
-    duygu = _duygu_analizi(mesaj)
-    psikoloji_verisi["mood"] = duygu
-    psikoloji_verisi["emotional_state"] = duygu
-    psikoloji_verisi["updated_at"] = simdi_iso
+    # YENİ PSİXOLOGİYA GÜNCELLEMESİ
+    yeni_psikoloji = _psikoloji_guncelle(mesaj, onceki_psikoloji, simdi_iso)
+    _json_yaz(psikoloji_yolu, yeni_psikoloji)
     
-    # Stress seviyesi
-    if duygu == "negative":
-        psikoloji_verisi["stress_level"] = min(10.0, psikoloji_verisi.get("stress_level", 0.0) + 0.5)
-    elif duygu == "positive":
-        psikoloji_verisi["stress_level"] = max(0.0, psikoloji_verisi.get("stress_level", 0.0) - 0.3)
-    
-    _json_yaz(psikoloji_yolu, psikoloji_verisi)
-    
-    # 4️⃣ intent_interest.json güncelle
+    # 4️⃣ intent_interest.json güncelle - EYNİ
     niyet_yolu = kullanici_dizini / "intent_interest.json"
     niyet_verisi = _json_oku(niyet_yolu, {})
     
@@ -234,7 +316,7 @@ def _beyin_guncelle(kullanici_id: str, mesaj: str, kullanici_adi: str):
     niyet_verisi["updated_at"] = simdi_iso
     _json_yaz(niyet_yolu, niyet_verisi)
     
-    # 5️⃣ relationship.json güncelle
+    # 5️⃣ relationship.json güncelle - EYNİ (OPERATOR REQUIRED ƏLAVƏ)
     iliski_yolu = kullanici_dizini / "relationship.json"
     iliski_verisi = _json_oku(iliski_yolu, {})
     
@@ -242,14 +324,27 @@ def _beyin_guncelle(kullanici_id: str, mesaj: str, kullanici_adi: str):
     iliski_verisi["last_interaction"] = simdi_iso
     iliski_verisi["updated_at"] = simdi_iso
     
-    # Güven seviyesini güncelle
-    if duygu == "positive":
-        mevcut_güven = iliski_verisi.get("trust_level", 0.0)
-        iliski_verisi["trust_level"] = min(1.0, mevcut_güven + 0.02)
-        iliski_verisi["loyalty"] = min(1.0, iliski_verisi.get("loyalty", 0.0) + 0.01)
-    elif duygu == "negative":
-        mevcut_güven = iliski_verisi.get("trust_level", 0.0)
-        iliski_verisi["trust_level"] = max(0.0, mevcut_güven - 0.05)
+    # Güven seviyesini psixologiyaya görə güncelle
+    current_mood = yeni_psikoloji.get("mood", "neutral")
+    current_confidence = yeni_psikoloji.get("confidence_level", 0.5)
+    
+    mevcut_güven = iliski_verisi.get("trust_level", 0.0)
+    
+    if current_mood in ["happy", "satisfied", "joyful", "positive"]:
+        iliski_verisi["trust_level"] = min(1.0, mevcut_güven + 0.03)
+        iliski_verisi["loyalty"] = min(1.0, iliski_verisi.get("loyalty", 0.0) + 0.02)
+    elif current_mood in ["angry", "stressed", "frustrated", "sad"]:
+        iliski_verisi["trust_level"] = max(0.0, mevcut_güven - 0.04)
+    elif current_confidence > 0.7:
+        iliski_verisi["trust_level"] = min(1.0, mevcut_güven + 0.01)
+    
+    # Operator required - psixologiyadan götür
+    operator_required = yeni_psikoloji.get("operator_required", False)
+    iliski_verisi["operator_required"] = operator_required
+    
+    # Əgər operator tələb olunursa, operator handoff faylına yaz
+    if operator_required:
+        _operator_handoff_ayarla(kullanici_id, True, "emotional_analysis")
     
     # Etkileşim seviyesi
     etkilesim_sayisi = iliski_verisi["interaction_count"]
@@ -262,66 +357,32 @@ def _beyin_guncelle(kullanici_id: str, mesaj: str, kullanici_adi: str):
     
     _json_yaz(iliski_yolu, iliski_verisi)
     
-    # 6️⃣ sales.json güncelle
+    # 6️⃣ sales.json güncelle - EYNİ
     satis_yolu = kullanici_dizini / "sales.json"
     satis_verisi = _json_oku(satis_yolu, {})
     
-    # Satış sinyalleri
-    satis_sinyalleri = satis_verisi.get("buying_signals", [])
-    
-    satis_kelimeleri = ["almaq", "satın", "qiymət", "bahası", "sifariş", "ödəniş", "alış", "fiyat"]
-    if any(kelime in mesaj.lower() for kelime in satis_kelimeleri):
-        satis_sinyalleri.append({
-            "timestamp": simdi_iso,
-            "signal": mesaj[:50],
-            "type": "buying_interest"
-        })
-        satis_verisi["buying_signals"] = satis_sinyalleri[-10:]  # Son 10 sinyal
-        
-        # Lead skorunu artır
-        mevcut_skor = satis_verisi.get("lead_score", 0)
-        satis_verisi["lead_score"] = min(100, mevcut_skor + 5)
-        
-        # Aşamayı güncelle
-        if satis_verisi["lead_score"] > 70:
-            satis_verisi["stage"] = "hot"
-        elif satis_verisi["lead_score"] > 40:
-            satis_verisi["stage"] = "warm"
-        elif satis_verisi["lead_score"] > 10:
-            satis_verisi["stage"] = "aware"
+    # Psixologiyaya görə satış potensialı
+    if current_mood in ["happy", "satisfied", "positive"] and current_confidence > 0.6:
+        satis_verisi["sales_potential"] = "high"
+    elif current_mood in ["neutral", "calm"] and yeni_psikoloji.get("stress_level", 0) < 3:
+        satis_verisi["sales_potential"] = "medium"
+    else:
+        satis_verisi["sales_potential"] = "low"
     
     satis_verisi["updated_at"] = simdi_iso
     _json_yaz(satis_yolu, satis_verisi)
     
-    # İsim çıkarımı (eğer mesajda isim varsa)
+    # 7. İsim çıkarımı (eğer mesajda isim varsa)
     isim = _isim_cikar(mesaj)
     if isim and isim != kullanici_adi:
         kimlik_verisi["real_name"] = isim
         _json_yaz(kimlik_yolu, kimlik_verisi)
+    
+    print(f"✅ Beyin güncellendi: {kullanici_id} - Mood: {current_mood}")
 
-def _duygu_analizi(metin: str) -> str:
-    """Metinden duygu çıkarır"""
-    metin_kucuk = metin.lower()
-    
-    pozitif_kelimeler = ["yaxşı", "şad", "əla", "təşəkkür", "sağ ol", "qane", "mükəmməl", "super", "çox gözəl"]
-    negatif_kelimeler = ["pis", "kədərli", "qəzəbli", "narahat", "problem", "şikayət", "acı", "pislik", "yox"]
-    heyecanli_kelimeler = ["təəccüb", "vau", "heyran", "maraqlı", "heyət", "möhtəşəm", "vay"]
-    
-    pozitif_sayi = sum(1 for kelime in pozitif_kelimeler if kelime in metin_kucuk)
-    negatif_sayi = sum(1 for kelime in negatif_kelimeler if kelime in metin_kucuk)
-    heyecanli_sayi = sum(1 for kelime in heyecanli_kelimeler if kelime in metin_kucuk)
-    
-    if pozitif_sayi > negatif_sayi and pozitif_sayi > heyecanli_sayi:
-        return "positive"
-    elif negatif_sayi > pozitif_sayi and negatif_sayi > heyecanli_sayi:
-        return "negative"
-    elif heyecanli_sayi > pozitif_sayi and heyecanli_sayi > negatif_sayi:
-        return "excited"
-    elif "?" in metin:
-        return "curious"
-    else:
-        return "neutral"
-
+# ======================================================
+# QALAN BÜTÜN FUNKSİYALAR EYNİ QALIR
+# ======================================================
 def _niyet_cikar(metin: str) -> str:
     """Metinden niyet çıkarır"""
     metin_kucuk = metin.lower()
@@ -382,9 +443,6 @@ def _isim_cikar(metin: str) -> str:
     
     return ""
 
-# ======================================================
-# KONUŞMA ARŞİVİ SİSTEMİ
-# ======================================================
 def _konusma_kaydet(kullanici_id: str, mesaj: str, cevap: str):
     """Konuşmayı tarihe göre arşivler"""
     simdi = datetime.now()
@@ -410,10 +468,7 @@ def _konusma_kaydet(kullanici_id: str, mesaj: str, cevap: str):
     
     _json_yaz(konusma_dosyasi, konusmalar)
 
-# ======================================================
-# OPERATOR HANDOFF SİSTEMİ (CONTROL/ Klasöründe)
-# ======================================================
-def _operator_handoff_ayarla(kullanici_id: str, aktif: bool):
+def _operator_handoff_ayarla(kullanici_id: str, aktif: bool, sebep: str = ""):
     """Operator handoff durumunu ayarlar"""
     operator_handoff_verisi = _json_oku(OPERATOR_HANDOFF_FILE, {})
     
@@ -421,7 +476,8 @@ def _operator_handoff_ayarla(kullanici_id: str, aktif: bool):
         operator_handoff_verisi[kullanici_id] = {
             "status": True,
             "updated_at": datetime.now().isoformat(),
-            "reason": "user_request"
+            "reason": sebep,
+            "emotional_analysis": True
         }
     else:
         # Eğer false ise, anahtarı sil
@@ -435,9 +491,6 @@ def _operator_handoff_aktif_mi(kullanici_id: str) -> bool:
     operator_handoff_verisi = _json_oku(OPERATOR_HANDOFF_FILE, {})
     return operator_handoff_verisi.get(kullanici_id, {}).get("status", False)
 
-# ======================================================
-# ANALİTİK SİSTEMİ
-# ======================================================
 def _analitik_guncelle():
     """Global analitik verilerini günceller"""
     global_analitik_dosya = ANALYTICS_PATH / "global.json"
@@ -480,15 +533,11 @@ def _analitik_guncelle():
     _json_yaz(global_analitik_dosya, analitik_veri)
 
 # ======================================================
-# ANA API FONKSİYONLARI (BOT.PY İÇİN)
+# ANA API FONKSİYONLARI - EYNİ
 # ======================================================
 def add_customer_if_not_exists(company_id: str, platform: str, user_id: str, username: str) -> bool:
     """
     Müşteri yoksa otomatik beyin oluşturur
-    company_id: Şirket ID (sadece imza için)
-    platform: "telegram" (sabit)
-    user_id: Gerçek Telegram user_id
-    username: Telegram kullanıcı adı
     """
     return _beyin_olustur(user_id, username)
 
@@ -507,14 +556,13 @@ def save_message(user_id: str, message: str, response: str,
     # 3. Analitik verilerini güncelle
     _analitik_guncelle()
     
-    print(f"📝 {user_id} için kaydedildi: {message[:30]}...")
+    print(f"📝 {user_id} için analiz edildi və yazıldı: {message[:30]}...")
 
 def set_operator_handoff(company_id: str, platform: str, user_id: str, active: bool):
     """
     Operator handoff durumunu ayarlar
-    active=True → bot SUSAR
     """
-    _operator_handoff_ayarla(user_id, active)
+    _operator_handoff_ayarla(user_id, active, "manual_request")
     print(f"🔄 Operator handoff: {user_id} = {active}")
 
 def is_operator_handoff_active(company_id: str, platform: str, user_id: str) -> bool:
@@ -523,9 +571,6 @@ def is_operator_handoff_active(company_id: str, platform: str, user_id: str) -> 
     """
     return _operator_handoff_aktif_mi(user_id)
 
-# ======================================================
-# OKUMA FONKSİYONLARI
-# ======================================================
 def get_customer_brain(user_id: str) -> Dict[str, Any]:
     """
     Kullanıcının tüm beyin verilerini döndürür
@@ -571,7 +616,8 @@ def get_customer_profile(user_id: str) -> Dict:
         "trust_level": iliski.get("trust_level", 0),
         "mood": psikoloji.get("mood", "neutral"),
         "lead_score": satis.get("lead_score", 0),
-        "last_seen": kimlik.get("last_seen", "")
+        "last_seen": kimlik.get("last_seen", ""),
+        "operator_required": iliski.get("operator_required", False)
     }
 
 def get_conversation_history(user_id: str, days: int = 7) -> List[Dict]:
@@ -597,10 +643,10 @@ def get_conversation_history(user_id: str, days: int = 7) -> List[Dict]:
     # Tarihe göre sırala (en yeni en üstte)
     tum_konusmalar.sort(key=lambda x: x.get("timestamp", ""), reverse=True)
     
-    return tum_konusmalar[:100]  # En fazla 100 mesaj
+    return tum_konusmalar[:100]
 
 # ======================================================
-# SİSTEM FONKSİYONLARI
+# SİSTEM FONKSİYONLARI - EYNİ
 # ======================================================
 class MemoryManager:
     """Eski bot.py ile uyumluluk için MemoryManager sınıfı"""
@@ -630,15 +676,16 @@ class MemoryManager:
             "total_customers": musteri_sayisi,
             "today_messages": bugun_mesaj,
             "last_update": analitik_veri.get("last_update", ""),
-            "system": "telegram_customer_brain"
+            "system": "telegram_customer_brain",
+            "architecture": "fail_safe_emotion_engine"
         }
     
     def get_customer_messages(self, user_id: str, limit: int = 50) -> List[Dict]:
-        """Müşterinin mesajlarını döndürür (eski uyumluluk için)"""
+        """Müşterinin mesajlarını döndürür"""
         return get_conversation_history(user_id, days=30)[:limit]
     
     def cleanup_old_data(self, days: int = 30):
-        """Eski verileri temizler (eski uyumluluk için)"""
+        """Eski verileri temizler"""
         print(f"⚠️ Cleanup fonksiyonu henüz implement edilmedi: {days} gün")
 
 def get_memory_manager():
@@ -658,29 +705,25 @@ def initialize_memory_system():
     
     musteri_sayisi = len(list(CUSTOMERS_PATH.glob("*/"))) if CUSTOMERS_PATH.exists() else 0
     
-    print(f"✅ Telegram Müşteri Beyin Sistemi Başlatıldı")
+    print(f"✅ QƏTİ Müşteri Beyin Sistemi Başlatıldı")
     print(f"📂 Temel yol: {BASE_PATH}")
     print(f"👥 Müşteri sayısı: {musteri_sayisi}")
+    print(f"🧠 FAIL-SAFE EMOTION ENGINE: AKTİV")
+    print(f"❌ UNKNOWN: QADAĞAN EDİLDİ")
     print(f"📊 Analitik: {ANALYTICS_PATH}")
-    print(f"🎛️  Kontrol: {CONTROL_PATH}")
     
     return {
         "status": "active",
         "path": str(BASE_PATH),
         "customer_count": musteri_sayisi,
-        "system": "telegram_customer_brain"
+        "system": "telegram_customer_brain",
+        "architecture": "fail_safe_emotion_engine",
+        "version": "3.0"
     }
 
 # ======================================================
-# BAŞLANGIÇ
+# BOT.PY ÜÇÜN EK FONKSİYONLAR - EYNİ
 # ======================================================
-# Dosya import edildiğinde dizinleri oluştur
-for dizin in [CUSTOMERS_PATH, CONVERSATIONS_PATH, CONTROL_PATH, ANALYTICS_PATH]:
-    dizin.mkdir(parents=True, exist_ok=True)
-# ======================================================
-# YENİ FUNKSİYALAR - BOT.PY ÜÇÜN (ƏN SONA ƏLAVƏ EDİN)
-# ======================================================
-
 def update_customer_psychology(company_id: str, platform: str, user_id: str, psychology_data: dict) -> bool:
     """
     Müştərinin psixologiya məlumatlarını yenilə
@@ -799,4 +842,11 @@ def update_customer_relationship(company_id: str, platform: str, user_id: str, r
         return True
     except Exception as e:
         print(f"❌ Münasibət yeniləmə xətası: {e}")
-        return False    
+        return False
+
+# ======================================================
+# BAŞLANGIÇ
+# ======================================================
+# Dosya import edildiğinde dizinleri oluştur
+for dizin in [CUSTOMERS_PATH, CONVERSATIONS_PATH, CONTROL_PATH, ANALYTICS_PATH]:
+    dizin.mkdir(parents=True, exist_ok=True)

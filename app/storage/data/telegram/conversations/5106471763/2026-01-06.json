@@ -1,0 +1,38 @@
+[
+  {
+    "timestamp": "2026-01-06T00:27:08.407549",
+    "user_message": "Pis",
+    "bot_response": "Maraqlıdır. Davam edin.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-06T00:36:41.653452",
+    "user_message": "Pis",
+    "bot_response": "Bu mövzuda düşünürəm.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-06T00:36:59.616072",
+    "user_message": "Əla",
+    "bot_response": "Sizi anladım. Bir az da izah edə bilərsiniz?",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-06T00:37:31.650555",
+    "user_message": "Fikirləşərəm",
+    "bot_response": "Bu mövzuda düşünürəm.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-06T00:37:52.990557",
+    "user_message": "Bərbad",
+    "bot_response": "Bu mövzuda düşünürəm.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-06T00:38:28.119129",
+    "user_message": "Yaxşı",
+    "bot_response": "Bu mövzuda düşünürəm.",
+    "message_type": "text"
+  }
+]

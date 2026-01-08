@@ -1,9 +1,9 @@
 {
-  "mood": "neutral",
-  "stress_level": 1.5,
-  "decision_speed": "unknown",
-  "confidence_level": 0.5,
-  "emotional_state": "neutral",
-  "updated_at": "2026-01-03T03:12:42.337785",
-  "current_mood": "neutral"
+  "current_mood": "abuse",
+  "emotional_state": "hostile",
+  "last_mood": "abuse",
+  "last_reason": "abuse_phrase: oğraş",
+  "last_message_type": "abuse",
+  "operator_required": true,
+  "updated_at": "2026-01-08T16:16:22.072180"
 }

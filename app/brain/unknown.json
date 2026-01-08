@@ -1,0 +1,40 @@
+[
+  {
+    "phrase": "Bədbəxt",
+    "full_message": "Bədbəxt",
+    "platform": "telegram",
+    "timestamp": "2026-01-08T14:56:51.134741",
+    "count": 1
+  },
+  {
+    "phrase": "Şadam",
+    "full_message": "Şadam",
+    "platform": "telegram",
+    "timestamp": "2026-01-08T15:24:54.748183",
+    "count": 1
+  },
+  {
+    "phrase": "üzgünəm",
+    "full_message": "üzgünəm",
+    "platform": "telegram",
+    "timestamp": "2026-01-08T15:29:38.695711",
+    "count": 1
+  },
+  {
+    "phrase": "Görəkdə",
+    "suspected_category": null,
+    "timestamp": "2026-01-08T15:50:26.983250"
+  },
+  {
+    "phrase": "Siz dələduzsunuz",
+    "suspected_category": "accusation",
+    "timestamp": "2026-01-08T16:04:31.194821",
+    "count": 1
+  },
+  {
+    "phrase": "Oğraş",
+    "suspected_category": "unknown",
+    "timestamp": "2026-01-08T16:15:04.218605",
+    "count": 1
+  }
+]

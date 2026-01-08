@@ -1,0 +1,254 @@
+{
+  "_meta": {
+    "version": "3.1",
+    "description": "FAIL-SAFE HUMAN PSYCHOLOGY RULES - UNKNOWN NEVER BECOMES MOOD",
+    "platforms": ["telegram", "whatsapp", "instagram", "facebook", "web"]
+  },
+
+  "abuse": {
+    "description": "Söyüş, təhqir, alçaldıcı ifadələr",
+    "priority": 1,
+    "operator_required": true,
+    "phrases": [
+      "dümbələy",
+      "oğraş",
+      "axmaq",
+      "dəli",
+      "mal",
+      "səfeh",
+      "şərəfsiz",
+      "it",
+      "donuz",
+      "alçaq",
+      "biyabırçı",
+      "utanmaz",
+      "adam deyilsən",
+      "ağılsız",
+      "sərsəm"
+    ],
+    "effects": {}
+  },
+
+  "threat": {
+    "description": "Təhdid, qorxutma",
+    "priority": 2,
+    "operator_required": true,
+    "phrases": [
+      "polisə verəcəm",
+      "məhkəməyə verəcəm",
+      "hamıya şikayət edəcəm",
+      "sizi bağlatdıracam",
+      "başınıza iş açacam"
+    ],
+    "effects": {}
+  },
+
+  "accusation": {
+    "description": "İttiham, günahlandırma, dələduzluq iddiası",
+    "priority": 3,
+    "operator_required": true,
+    "phrases": [
+      "şikayət edecəm",
+      "siz dələduzsunuz",
+      "məni aldadınız",
+      "pulumu yediniz",
+      "fırıldaqçı",
+      "yalan danışırsınız",
+      "bu fırıldaqdır",
+      "haqsızlıq etdiniz"
+    ],
+    "effects": {}
+  },
+
+  "urgency": {
+    "description": "Acil kömək tələbi, dərhal reaksiya",
+    "priority": 4,
+    "operator_required": false,
+    "phrases": [
+      "kömək edin",
+      "yardım edin",
+      "tez olun",
+      "dərhal",
+      "çox vacib",
+      "acil yardım",
+      "təcili kömək",
+      "canım yanır",
+      "vaxtım azdır",
+      "dərhal cavab"
+    ],
+    "effects": {
+      "stress": 6.0
+    }
+  },
+
+  "anger": {
+    "description": "Qəzəb, əsəbləşmə",
+    "priority": 5,
+    "operator_required": false,
+    "phrases": [
+      "əsəbləşmişəm",
+      "qəzəbliyəm",
+      "zəhləm gedir",
+      "bərbat",
+      "iyrənc",
+      "kifayət",
+      "əsəblərim pozuldu",
+      "hirsliyəm",
+      "qızmışam",
+      "pis",
+      "çox pis",
+      "dəhşətli"
+    ],
+    "effects": {
+      "anger": 6.0,
+      "stress": 3.0
+    }
+  },
+
+  "frustration": {
+    "description": "Məyusluq, bezginlik",
+    "priority": 6,
+    "operator_required": false,
+    "phrases": [
+      "bezmişəm",
+      "sıxılmışam",
+      "yorğunam",
+      "narazıyam",
+      "olmadı",
+      "yenə eyni",
+      "dəyişməyib",
+      "kömək etmir"
+    ],
+    "effects": {
+      "stress": 4.0,
+      "anger": 3.0
+    }
+  },
+
+  "sadness": {
+    "description": "Kədər, hüzn, üzüntü",
+    "priority": 7,
+    "operator_required": false,
+    "phrases": [
+      "kədərliyəm",
+      "üzgünəm",
+      "hüznlüyəm",
+      "ümidsizəm",
+      "çarəsizəm",
+      "ağlayıram",
+      "dağılıram",
+      "itirdim",
+      "unudulmuşam"
+    ],
+    "effects": {
+      "sadness": 5.0,
+      "stress": 2.0
+    }
+  },
+
+  "stress": {
+    "description": "Stress, gərginlik",
+    "priority": 8,
+    "operator_required": false,
+    "phrases": [
+      "stresliyəm",
+      "gərginəm",
+      "tələsirəm",
+      "tez",
+      "gec",
+      "gecikdi",
+      "gec cavab",
+      "narahatam",
+      "problem",
+      "çətin",
+      "təngə gəlmişəm",
+      "çox iş"
+    ],
+    "effects": {
+      "stress": 5.0
+    }
+  },
+
+  "joy": {
+    "description": "Sevinc, müsbət emosiyalar",
+    "priority": 9,
+    "operator_required": false,
+    "phrases": [
+      "sevinirəm",
+      "şadam",
+      "xoşbəxtəm",
+      "əla",
+      "mükəmməl",
+      "super",
+      "təşəkkür edirəm",
+      "sağ olun",
+      "çox sağ ol",
+      "razıyam",
+      "məmnunam"
+    ],
+    "effects": {
+      "joy": 5.0,
+      "satisfaction": 3.0
+    }
+  },
+
+  "satisfaction": {
+    "description": "Razılıq, rahatlıq",
+    "priority": 10,
+    "operator_required": false,
+    "phrases": [
+      "qane",
+      "yaxşıdır",
+      "rahatam",
+      "sakitəm",
+      "bitdi",
+      "tamamlandı"
+    ],
+    "effects": {
+      "satisfaction": 4.5,
+      "joy": 2.0
+    }
+  },
+
+  "thinking_state": {
+    "description": "Fikirləşmə, qərar mərhələsi",
+    "priority": 11,
+    "operator_required": false,
+    "phrases": [
+      "fikirləşirəm",
+      "düşünürəm",
+      "baxaram",
+      "araşdırım",
+      "müqayisə edim",
+      "görək"
+    ],
+    "effects": {}
+  },
+
+  "non_emotional": {
+    "description": "Emosiyasız, texniki və qısa cavablar",
+    "priority": 99,
+    "operator_required": false,
+    "phrases": [
+      "ok",
+      "aydındır",
+      "tamam",
+      "başa düşdüm",
+      "anladım",
+      "hə",
+      "bəli",
+      "yox",
+      "xeyr",
+      "salam",
+      "salamlar",
+      "hello",
+      "hi",
+      "göndər",
+      "haradadır",
+      "nədir",
+      "kim",
+      "necə"
+    ],
+    "effects": {}
+  }
+}

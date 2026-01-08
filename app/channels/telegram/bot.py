@@ -13,18 +13,15 @@ from telegram.ext import (
     filters,
 )
 
-# 🔹 MEMORY FUNKSİYALARI
+# 🔹 YENİ MEMORY FUNKSİYALARI
 from app.storage.memory import (
     add_customer_if_not_exists,
     save_message,
     set_operator_handoff,
     is_operator_handoff_active,
-    update_customer_psychology,
-    update_customer_sales,
-    update_customer_intent,
-    update_customer_relationship,
     get_customer_brain
 )
+
 
 # ==============================
 # ENV
@@ -64,7 +61,7 @@ OPERATOR_KEYWORDS = [
 # ==============================
 # AI RESPONSE (sadə)
 # ==============================
-def generate_response(text: str) -> str:
+def generate_response(text: str, mood: str = "neutral") -> str:
     t = text.lower()
 
     if "salam" in t:
@@ -73,81 +70,22 @@ def generate_response(text: str) -> str:
         return "Yaxşıyam, siz necəsiniz?"
     if "sağ ol" in t or "təşəkkür" in t:
         return "Rica edirəm 🙌"
+    
+    # Mood'a görə cavab
+    if mood == "angry":
+        return "Başa düşürəm, narahat olmağınızı. Kömək edə bilərəm."
+    elif mood == "stressed":
+        return "Sakit olun, problemimi həll edək."
+    elif mood == "sad":
+        return "Üzüldüyünüzü hiss edirəm. Kömək etmək istəyirəm."
+    elif mood == "joyful":
+        return "Sizin sevinciniz məni də sevindirir! 🎉"
 
     return random.choice([
         "Sizi anladım. Bir az da izah edə bilərsiniz?",
         "Maraqlıdır. Davam edin.",
         "Bu mövzuda düşünürəm."
     ])
-
-# ==============================
-# PSİXOLOJİ ANALİZİ
-# ==============================
-def analyze_psychology(text: str) -> dict:
-    """Mesajdan psixoloji vəziyyəti analiz et"""
-    text_lower = text.lower()
-    
-    anger_words = ["pis", "axmaq", "idiot", "ləğv", "bərbad", "narahat", "acıqlı"]
-    anger_level = sum(1 for word in anger_words if word in text_lower)
-    
-    stress_words = ["kömək", "təcili", "dərhal", "acil", "problem", "çətin"]
-    stress_level = sum(1 for word in stress_words if word in text_lower)
-    
-    positive_words = ["yaxşı", "əla", "mükəmməl", "təşəkkür", "sağ ol", "sevdim"]
-    happiness_level = sum(1 for word in positive_words if word in text_lower)
-    
-    # Ümumi mood
-    if anger_level > 2:
-        mood = "angry"
-    elif stress_level > 2:
-        mood = "stressed"
-    elif happiness_level > 1:
-        mood = "positive"
-    else:
-        mood = "neutral"
-    
-    return {
-        "current_mood": mood,
-        "emotional_state": {
-            "anger_level": min(10, anger_level * 2),
-            "stress_level": min(10, stress_level * 2),
-            "happiness_level": min(10, happiness_level * 3),
-            "patience_level": max(1, 5 - anger_level)
-        }
-    }
-
-# ==============================
-# NİYYƏT ANALİZİ
-# ==============================
-def analyze_intent(text: str) -> dict:
-    """Mesajdan niyyəti analiz et"""
-    text_lower = text.lower()
-    
-    intent = "support"
-    interests = []
-    
-    # Satış niyyəti
-    sales_words = ["qiymət", "almaq", "satın", "məhsul", "endirim", "kampaniya"]
-    if any(word in text_lower for word in sales_words):
-        intent = "sales_inquiry"
-        interests.append("pricing")
-    
-    # Problem niyyəti
-    problem_words = ["problem", "şikayət", "pis", "kömək", "yararsız"]
-    if any(word in text_lower for word in problem_words):
-        intent = "complaint"
-        interests.append("support")
-    
-    # Sual niyyəti
-    question_words = ["necə", "nə", "niyə", "harda", "nə vaxt", "kim"]
-    if any(word in text_lower for word in question_words) or "?" in text:
-        intent = "question"
-        interests.append("information")
-    
-    return {
-        "current_intent": intent,
-        "interests": interests
-    }
 
 # ==============================
 # MAIN HANDLER (TƏK AXIN)
@@ -180,7 +118,7 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if is_operator_handoff_active(company_id, platform, user_id):
         return
 
-    # 3️⃣ OPERATORA KEÇİD
+    # 3️⃣ OPERATORA KEÇİD (Xüsusi sözlər)
     if any(k in text.lower() for k in OPERATOR_KEYWORDS):
         set_operator_handoff(company_id, platform, user_id, True)
 
@@ -201,73 +139,24 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
             )
         return
 
-    # 4️⃣ PSİXOLOJİ VƏ NİYYƏT ANALİZİ
-    psychology_data = analyze_psychology(text)
-    intent_data = analyze_intent(text)
+    # 4️⃣ PSİXOLOGİYA VƏ NİYYƏT ANALİZİ (DEEPTHINK İLE)
+    # Bu artıq save_message daxilində edilir
     
-    # 5️⃣ SATIŞ POTENSİALI
-    customer_brain = get_customer_brain(user_id)
-    message_count = customer_brain.get("behavior", {}).get("message_count", 0)
-    
-    # Lead score hesabla
-    lead_score = min(100, message_count * 5)
-    if psychology_data["current_mood"] == "positive":
-        lead_score += 20
-    elif psychology_data["current_mood"] == "angry":
-        lead_score -= 30
-    
-    # Satış məlumatları
-    sales_data = {
-        "lead_score": lead_score,
-        "sales_stage": "warm" if lead_score > 50 else "cold",
-        "conversion_likelihood": lead_score
-    }
-    
-    # Münasibət məlumatları
-    relationship_data = {
-        "satisfaction_level": 7 if psychology_data["current_mood"] == "positive" else 5
-    }
-    
-    # 6️⃣ MEMORY YENİLƏ
-    update_customer_psychology(
-        company_id=company_id,
-        platform=platform,
-        user_id=user_id,
-        psychology_data=psychology_data
-    )
-    
-    update_customer_intent(
-        company_id=company_id,
-        platform=platform,
-        user_id=user_id,
-        intent_data=intent_data
-    )
-    
-    update_customer_sales(
-        company_id=company_id,
-        platform=platform,
-        user_id=user_id,
-        sales_data=sales_data
-    )
-    
-    update_customer_relationship(
-        company_id=company_id,
-        platform=platform,
-        user_id=user_id,
-        relationship_data=relationship_data
-    )
-    
-    # 7️⃣ THINKING UX
+    # 5️⃣ THINKING UX
     await context.bot.send_chat_action(
         chat_id=message.chat_id,
         action="typing"
     )
     await asyncio.sleep(random.uniform(1.2, 2.0))
 
-    # 8️⃣ RESPONSE
-    response = generate_response(text)
+    # 6️⃣ MOOD'U AL RESPONSE ÜÇÜN
+    customer_brain = get_customer_brain(user_id)
+    current_mood = customer_brain.get("psychology", {}).get("mood", "neutral")
+    
+    # 7️⃣ RESPONSE GENERATE
+    response = generate_response(text, current_mood)
 
-    # 9️⃣ MESSAGE SAVE
+    # 8️⃣ MESSAGE SAVE (DEEPTHINK ANALİZİ DAXİLİ)
     save_message(
         user_id=user_id,
         message=text,
@@ -277,7 +166,7 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
         username=username
     )
 
-    # 🔟 SEND
+    # 9️⃣ SEND
     await message.reply_text(response, reply_markup=CHAT_MENU)
 
 # ==============================
@@ -285,7 +174,7 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # ==============================
 def main():
     print("🤖 BOT STARTED")
-    print("🧠 Memory: ACTIVE")
+    print("🧠 DEEPTHINK Memory: ACTIVE")
     print("👥 Operator Handoff: ACTIVE")
     print("=" * 40)
 

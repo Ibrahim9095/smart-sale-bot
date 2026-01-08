@@ -1,0 +1,404 @@
+[
+  {
+    "timestamp": "2026-01-08T03:00:48.957729",
+    "user_message": "Salam",
+    "bot_response": "Salam! Necəsiniz? 😊",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T03:01:36.126799",
+    "user_message": "Ü",
+    "bot_response": "Maraqlıdır. Davam edin.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T03:47:58.318100",
+    "user_message": "👋 Sağ ol",
+    "bot_response": "Rica edirəm 🙌",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T03:48:36.765870",
+    "user_message": "Sevinirəm",
+    "bot_response": "Bu mövzuda düşünürəm.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T03:49:11.573207",
+    "user_message": "Hh",
+    "bot_response": "Maraqlıdır. Davam edin.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T13:11:20.748765",
+    "user_message": "❓ Sualım var",
+    "bot_response": "Maraqlıdır. Davam edin.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T13:34:46.637718",
+    "user_message": "Necə",
+    "bot_response": "Bu mövzuda düşünürəm.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T13:35:57.606910",
+    "user_message": "Fikirləşmə",
+    "bot_response": "Maraqlıdır. Davam edin.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T13:36:26.569774",
+    "user_message": "Bezmişəm",
+    "bot_response": "Maraqlıdır. Davam edin.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T14:09:32.535665",
+    "user_message": "Necəsən",
+    "bot_response": "Yaxşıyam, siz necəsiniz?",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T14:09:46.580241",
+    "user_message": "Çox gec cavab verirsiniz",
+    "bot_response": "Sizi anladım. Bir az da izah edə bilərsiniz?",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T14:09:59.225881",
+    "user_message": "Hmm şikayət edəcəm sizi",
+    "bot_response": "Sakit olun, problemimi həll edək.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T14:10:37.995147",
+    "user_message": "Məhkəməyə gedirəm",
+    "bot_response": "Maraqlıdır. Davam edin.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T14:12:19.329912",
+    "user_message": "Şikayət edəcəm",
+    "bot_response": "Maraqlıdır. Davam edin.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T14:36:04.424048",
+    "user_message": "Çox sağol 😄",
+    "bot_response": "Maraqlıdır. Davam edin.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T14:36:14.194833",
+    "user_message": "Şikayət edəcəm",
+    "bot_response": "Sizi anladım. Bir az da izah edə bilərsiniz?",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T14:36:35.071854",
+    "user_message": "Şikayət edəcəm",
+    "bot_response": "Maraqlıdır. Davam edin.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T14:37:15.765689",
+    "user_message": "şikayət edəcəm",
+    "bot_response": "Bu mövzuda düşünürəm.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T14:39:58.042061",
+    "user_message": "şikayet edecem",
+    "bot_response": "Maraqlıdır. Davam edin.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T14:40:21.414126",
+    "user_message": "şikayet edecem",
+    "bot_response": "Sakit olun, problemimi həll edək.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T14:41:05.596872",
+    "user_message": "Şikayət edəcəm",
+    "bot_response": "Maraqlıdır. Davam edin.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T14:41:26.138821",
+    "user_message": "Şikayet edecəm",
+    "bot_response": "Sizi anladım. Bir az da izah edə bilərsiniz?",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T14:42:38.838456",
+    "user_message": "Dümbələy",
+    "bot_response": "Sakit olun, problemimi həll edək.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T14:43:26.552083",
+    "user_message": "Dümbələy",
+    "bot_response": "Bu mövzuda düşünürəm.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T14:43:59.530261",
+    "user_message": "Dümbələy",
+    "bot_response": "Sizi anladım. Bir az da izah edə bilərsiniz?",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T14:44:32.844267",
+    "user_message": "Dümbələy",
+    "bot_response": "Maraqlıdır. Davam edin.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T14:45:07.785094",
+    "user_message": "Mən bir məhsul haqqında soruşmaq istəyirəm",
+    "bot_response": "Sakit olun, problemimi həll edək.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T14:45:30.643402",
+    "user_message": "Əladır",
+    "bot_response": "Maraqlıdır. Davam edin.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T14:45:51.761373",
+    "user_message": "Niyə gec cavab verirsiniz?",
+    "bot_response": "Maraqlıdır. Davam edin.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T14:52:08.944270",
+    "user_message": "teker",
+    "bot_response": "Sakit olun, problemimi həll edək.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T14:52:30.437659",
+    "user_message": "Təkər",
+    "bot_response": "Sakit olun, problemimi həll edək.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T14:52:37.126881",
+    "user_message": "teker",
+    "bot_response": "Maraqlıdır. Davam edin.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T14:56:51.168762",
+    "user_message": "Bədbəxt",
+    "bot_response": "Sakit olun, problemimi həll edək.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T15:10:07.747817",
+    "user_message": "Sikayet edərəm problem deyil",
+    "bot_response": "Maraqlıdır. Davam edin.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T15:18:27.701664",
+    "user_message": "Düşünürəm",
+    "bot_response": "Sakit olun, problemimi həll edək.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T15:24:32.035591",
+    "user_message": "Razıyam",
+    "bot_response": "Sakit olun, problemimi həll edək.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T15:24:55.048908",
+    "user_message": "Şadam",
+    "bot_response": "Maraqlıdır. Davam edin.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T15:25:14.236057",
+    "user_message": "Çox şadam",
+    "bot_response": "Sizi anladım. Bir az da izah edə bilərsiniz?",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T15:25:36.089452",
+    "user_message": "sevinirəm",
+    "bot_response": "Sizi anladım. Bir az da izah edə bilərsiniz?",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T15:25:53.345731",
+    "user_message": "gərginəm",
+    "bot_response": "Maraqlıdır. Davam edin.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T15:26:18.222086",
+    "user_message": "əsəbləşmişəm",
+    "bot_response": "Sakit olun, problemimi həll edək.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T15:26:39.762757",
+    "user_message": "kədərliyəm",
+    "bot_response": "Başa düşürəm, narahat olmağınızı. Kömək edə bilərəm.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T15:27:04.033350",
+    "user_message": "məmnunam",
+    "bot_response": "Üzüldüyünüzü hiss edirəm. Kömək etmək istəyirəm.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T15:27:59.191579",
+    "user_message": "Kömək edin",
+    "bot_response": "Maraqlıdır. Davam edin.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T15:28:49.618019",
+    "user_message": "Bezmişəm",
+    "bot_response": "Sakit olun, problemimi həll edək.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T15:29:38.727732",
+    "user_message": "üzgünəm",
+    "bot_response": "Sakit olun, problemimi həll edək.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T15:29:55.362939",
+    "user_message": "Kədər",
+    "bot_response": "Bu mövzuda düşünürəm.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T15:32:12.244235",
+    "user_message": "Məmnunam",
+    "bot_response": "Üzüldüyünüzü hiss edirəm. Kömək etmək istəyirəm.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T15:44:09.595228",
+    "user_message": "çox şadam",
+    "bot_response": "Sizi anladım. Bir az da izah edə bilərsiniz?",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T15:45:08.761917",
+    "user_message": "Mən artıq xoşbəxtəm",
+    "bot_response": "Maraqlıdır. Davam edin.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T15:45:26.610892",
+    "user_message": "Çətin",
+    "bot_response": "Bu mövzuda düşünürəm.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T15:45:42.071721",
+    "user_message": "çətin",
+    "bot_response": "Sizi anladım. Bir az da izah edə bilərsiniz?",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T15:46:04.833492",
+    "user_message": "qəzəbliyəm",
+    "bot_response": "Maraqlıdır. Davam edin.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T15:46:43.339079",
+    "user_message": "çətin",
+    "bot_response": "Sizi anladım. Bir az da izah edə bilərsiniz?",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T15:47:05.347863",
+    "user_message": "Kədərliyəm",
+    "bot_response": "Sizi anladım. Bir az da izah edə bilərsiniz?",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T15:47:25.134693",
+    "user_message": "Rahatam",
+    "bot_response": "Sizi anladım. Bir az da izah edə bilərsiniz?",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T15:47:45.733554",
+    "user_message": "Kömək edin",
+    "bot_response": "Maraqlıdır. Davam edin.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T15:48:47.214848",
+    "user_message": "Bezmişəm",
+    "bot_response": "Maraqlıdır. Davam edin.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T15:49:11.934622",
+    "user_message": "yorğunam",
+    "bot_response": "Maraqlıdır. Davam edin.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T15:49:38.992766",
+    "user_message": "rer",
+    "bot_response": "Maraqlıdır. Davam edin.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T15:50:27.054296",
+    "user_message": "Görəkdə",
+    "bot_response": "Sizi anladım. Bir az da izah edə bilərsiniz?",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T15:51:26.059434",
+    "user_message": "Görəkdə",
+    "bot_response": "Sizi anladım. Bir az da izah edə bilərsiniz?",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T15:51:44.738267",
+    "user_message": "Ok",
+    "bot_response": "Sizi anladım. Bir az da izah edə bilərsiniz?",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T16:04:31.213834",
+    "user_message": "Siz dələduzsunuz",
+    "bot_response": "Sizi anladım. Bir az da izah edə bilərsiniz?",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T16:10:28.188221",
+    "user_message": "Səfeh",
+    "bot_response": "Maraqlıdır. Davam edin.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T16:15:04.245623",
+    "user_message": "Oğraş",
+    "bot_response": "Bu mövzuda düşünürəm.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-08T16:16:22.110204",
+    "user_message": "Oğraş",
+    "bot_response": "Bu mövzuda düşünürəm.",
+    "message_type": "text"
+  }
+]
