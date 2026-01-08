@@ -1,0 +1,140 @@
+[
+  {
+    "timestamp": "2026-01-09T00:00:02.644950",
+    "user_message": "Çətin",
+    "bot_response": "Sizi anladım. Bir az da izah edə bilərsiniz?",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-09T00:00:19.888250",
+    "user_message": "Noldu niyə yazmırsan",
+    "bot_response": "Sizi anladım. Bir az da izah edə bilərsiniz?",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-09T00:00:38.644890",
+    "user_message": "Nə oldu niyə yazmırsan",
+    "bot_response": "Maraqlıdır. Davam edin.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-09T00:54:36.398456",
+    "user_message": "👋 Sağ ol",
+    "bot_response": "Rica edirəm 🙌",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-09T00:54:50.121062",
+    "user_message": "Kömək edin",
+    "bot_response": "Bu mövzuda düşünürəm.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-09T00:56:29.965310",
+    "user_message": "Yardım edin",
+    "bot_response": "Bu mövzuda düşünürəm.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-09T00:56:58.815169",
+    "user_message": "Əsəbləşmişəm",
+    "bot_response": "Maraqlıdır. Davam edin.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-09T00:57:23.305221",
+    "user_message": "Bilmirəm nəsə çox pisəm səbəbin bilmirəm",
+    "bot_response": "Başa düşürəm, narahat olmağınızı. Kömək edə bilərəm.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-09T00:57:44.837093",
+    "user_message": "Dəhşətli",
+    "bot_response": "Başa düşürəm, narahat olmağınızı. Kömək edə bilərəm.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-09T00:58:01.068799",
+    "user_message": "Bezmişəm",
+    "bot_response": "Başa düşürəm, narahat olmağınızı. Kömək edə bilərəm.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-09T00:58:12.616852",
+    "user_message": "Kömək etmirsiniz",
+    "bot_response": "Maraqlıdır. Davam edin.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-09T00:58:33.641879",
+    "user_message": "Ağlayıram",
+    "bot_response": "Sizi anladım. Bir az da izah edə bilərsiniz?",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-09T00:58:49.716105",
+    "user_message": "Problem",
+    "bot_response": "Üzüldüyünüzü hiss edirəm. Kömək etmək istəyirəm.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-09T00:58:56.505367",
+    "user_message": "Nə oldu",
+    "bot_response": "Sakit olun, problemimi həll edək.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-09T00:59:30.153718",
+    "user_message": "Noldu niyə yazmırsan",
+    "bot_response": "Maraqlıdır. Davam edin.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-09T00:59:36.917018",
+    "user_message": "Noldu",
+    "bot_response": "Sakit olun, problemimi həll edək.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-09T00:59:46.281557",
+    "user_message": "nəoldu",
+    "bot_response": "Sakit olun, problemimi həll edək.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-09T01:01:41.118185",
+    "user_message": "Nə oldu niyə yazmırsan",
+    "bot_response": "Maraqlıdır. Davam edin.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-09T01:03:01.046402",
+    "user_message": "Nə oldu",
+    "bot_response": "Sizi anladım. Bir az da izah edə bilərsiniz?",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-09T01:03:21.780643",
+    "user_message": "Nə oldu niyə yazmırsan",
+    "bot_response": "Sakit olun, problemimi həll edək.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-09T01:06:50.034139",
+    "user_message": "Nə oldu niyə yazmırsan",
+    "bot_response": "Sakit olun, problemimi həll edək.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-09T01:07:06.438822",
+    "user_message": "Cındır",
+    "bot_response": "Sakit olun, problemimi həll edək.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-09T01:08:01.216873",
+    "user_message": "Cındır",
+    "bot_response": "Sizi anladım. Bir az da izah edə bilərsiniz?",
+    "message_type": "text"
+  }
+]

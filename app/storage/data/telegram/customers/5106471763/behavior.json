@@ -1,7 +1,7 @@
 {
-  "message_count": 85,
-  "last_seen": "2026-01-08T16:16:22.072180",
-  "updated_at": "2026-01-08T16:16:22.072180",
+  "message_count": 140,
+  "last_seen": "2026-01-09T01:08:01.027747",
+  "updated_at": "2026-01-09T01:08:01.027747",
   "active_hours": [
     17,
     23,
@@ -11,8 +11,10 @@
     13,
     14,
     15,
-    16
+    16,
+    22,
+    1
   ],
   "message_frequency": "high",
-  "avg_message_length": 5
+  "avg_message_length": 9
 }

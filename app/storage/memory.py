@@ -52,40 +52,33 @@ def _json_yaz(dosya_yolu: Path, veri: Any):
     with open(dosya_yolu, 'w', encoding='utf-8') as f:
         json.dump(veri, f, indent=2, ensure_ascii=False)
 
-# ======================================================
-# PSİXOLOGİYA GÜNCELLEME - QƏTİ SİSTEM
-# ======================================================
-# ======================================================
-# PSİXOLOGİYA GÜNCELLEME - REAL-TIME RULE COMPATIBLE
-# ======================================================
 
 # ======================================================
 # PSİXOLOGİYA GÜNCELLEME - YENİ SİSTEM
 # ======================================================
 def _psikoloji_guncelle(mesaj: str, onceki_psikoloji: dict, simdi_iso: str) -> dict:
     """
-    YENİ DEEPTHINK ilə psixologiya güncellemesi
+    YENİ DEEPTHINK v4.0 ilə psixologiya güncellemesi
     """
     
-    # DEEPTHINK çağır (REAL-TIME rules load)
+    # DEEPTHINK çağır
     analiz = deepthink.analyze(mesaj)
     
     # ========== UNKNOWN HALI ==========
     if analiz is None:
-        print(f"❓ UNKNOWN: '{mesaj[:30]}...' → ÖNCƏKİ MOOD SAXLANDI")
+        print(f"❓ GERÇƏK UNKNOWN: '{mesaj[:30]}...' → ÖNCƏKİ MOOD SAXLANDI")
         
         if onceki_psikoloji:
             # Köhnə psixologiyanı qaytar, sadəcə updated_at yenilə
-            result = {
+            return {
                 "current_mood": onceki_psikoloji.get("current_mood", "neutral"),
                 "emotional_state": onceki_psikoloji.get("emotional_state", "calm"),
                 "last_mood": onceki_psikoloji.get("current_mood", "neutral"),
-                "last_reason": "unknown_phrase_detected",
+                "last_reason": "real_unknown_phrase",
                 "last_message_type": "unknown",
-                "operator_required": False,  # Unknown üçün operator YOX
+                "operator_required": False,
                 "updated_at": simdi_iso
             }
-            return result
         else:
             # İlk dəfədirsə, default yarat
             return {
@@ -99,8 +92,6 @@ def _psikoloji_guncelle(mesaj: str, onceki_psikoloji: dict, simdi_iso: str) -> d
             }
     
     # ========== KATEQORİYA TAPILDI ==========
-    # YALNIZ TƏLƏB OLUNAN 7 SAHƏ
-    
     # last_mood = əvvəlki current_mood
     last_mood = onceki_psikoloji.get("current_mood", "neutral") if onceki_psikoloji else "neutral"
     
@@ -111,18 +102,30 @@ def _psikoloji_guncelle(mesaj: str, onceki_psikoloji: dict, simdi_iso: str) -> d
         "last_reason": analiz.get("last_reason", ""),
         "last_message_type": analiz.get("last_message_type", ""),
         "operator_required": analiz.get("operator_required", False),
-        "updated_at": simdi_iso
+        "updated_at": simdi_iso,
+        # Əlavə sahələr (psychology.json formatı üçün)
+        "mood": analiz.get("current_mood", "neutral"),  # Köhnə sistemlə uyğunluq
+        "confidence_level": 0.5,
+        "stress_level": 1.0 if analiz.get("last_message_type") == "stress" else 0.0,
+        "anger_level": 1.0 if analiz.get("last_message_type") == "anger" else 0.0,
+        "sadness_level": 1.0 if analiz.get("last_message_type") == "sadness" else 0.0,
+        "joy_level": 1.0 if analiz.get("last_message_type") == "joy" else 0.0,
+        "satisfaction_level": 1.0 if analiz.get("last_message_type") == "satisfaction" else 0.0,
+        "energy_level": 0.7 if analiz.get("last_message_type") in ["joy", "satisfaction"] else 0.3,
+        "psychological_state": "normal",
+        "trend": "stable"
     }
     
     # ========== CRITICAL CATEGORY LOQ ==========
     current_mood = result["current_mood"]
-    if current_mood in ["abuse", "threat", "blackmail", "accusation", "harassment"]:
+    if current_mood in ["abuse", "threat", "blackmail", "accusation", "harassment", "urgency"]:
         print(f"🚨 CRITICAL: '{mesaj[:30]}...' → {current_mood.upper()} (OPERATOR REQUIRED)")
+    elif analiz.get("last_message_type") == "unknown":
+        print(f"❓ UNKNOWN: '{mesaj[:30]}...'")
     else:
         print(f"✅ PSİXOLOGİYA: '{mesaj[:30]}...' → {current_mood}")
     
     return result
-
 # QALAN BÜTÜN KOD EYNİ QALIR - HEÇ BİR DƏYİŞİKLİK YOXDUR
 # ======================================================
 # BEYİN OLUŞTURMA SİSTEMİ - EYNİ

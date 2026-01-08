@@ -11,6 +11,7 @@
     "operator_required": true,
     "phrases": [
       "dümbələy",
+      "Cındır",
       "oğraş",
       "axmaq",
       "dəli",
@@ -162,7 +163,11 @@
       "problem",
       "çətin",
       "təngə gəlmişəm",
-      "çox iş"
+      "noldu niye yazmirsan",
+      "nəoldu niyə yazmirsan",
+      "nəoldu niyə yazmirsiniz",
+      "nə oldu",
+      "noldu"
     ],
     "effects": {
       "stress": 5.0
@@ -184,7 +189,8 @@
       "sağ olun",
       "çox sağ ol",
       "razıyam",
-      "məmnunam"
+      "məmnunam",
+      "Hər şey əladır"
     ],
     "effects": {
       "joy": 5.0,

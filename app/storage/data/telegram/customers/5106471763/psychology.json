@@ -1,9 +1,19 @@
 {
   "current_mood": "abuse",
   "emotional_state": "hostile",
-  "last_mood": "abuse",
-  "last_reason": "abuse_phrase: oğraş",
+  "last_mood": "stressed",
+  "last_reason": "abuse_phrase: cindir",
   "last_message_type": "abuse",
   "operator_required": true,
-  "updated_at": "2026-01-08T16:16:22.072180"
+  "updated_at": "2026-01-09T01:08:01.027747",
+  "mood": "abuse",
+  "confidence_level": 0.5,
+  "stress_level": 0.0,
+  "anger_level": 0.0,
+  "sadness_level": 0.0,
+  "joy_level": 0.0,
+  "satisfaction_level": 0.0,
+  "energy_level": 0.3,
+  "psychological_state": "normal",
+  "trend": "stable"
 }

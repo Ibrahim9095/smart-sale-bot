@@ -36,5 +36,118 @@
     "suspected_category": "unknown",
     "timestamp": "2026-01-08T16:15:04.218605",
     "count": 1
+  },
+  {
+    "phrase": "Noldu niyə yazmırsan",
+    "suspected_category": "unknown",
+    "timestamp": "2026-01-08T22:58:34.878218",
+    "count": 2,
+    "last_seen": "2026-01-08T23:02:22.522424"
+  },
+  {
+    "phrase": "Noldu?",
+    "suspected_category": "unknown",
+    "timestamp": "2026-01-08T23:02:10.646212",
+    "count": 1
+  },
+  {
+    "phrase": "nə oldu",
+    "suspected_category": "unknown",
+    "timestamp": "2026-01-08T23:03:32.659608",
+    "count": 3,
+    "last_seen": "2026-01-08T23:39:17.332988"
+  },
+  {
+    "phrase": "Nə oldu niyə yazmırsan",
+    "suspected_category": "unknown",
+    "timestamp": "2026-01-08T23:03:58.077467",
+    "count": 5,
+    "last_seen": "2026-01-09T00:00:38.570840"
+  },
+  {
+    "phrase": "Nə yaxşı",
+    "suspected_category": "unknown",
+    "timestamp": "2026-01-08T23:06:13.968197",
+    "count": 1
+  },
+  {
+    "phrase": "Sevindim",
+    "suspected_category": "unknown",
+    "timestamp": "2026-01-08T23:06:55.980752",
+    "count": 1
+  },
+  {
+    "phrase": "Hər şey əladır",
+    "suspected_category": "unknown",
+    "timestamp": "2026-01-08T23:31:57.936798",
+    "count": 3,
+    "last_seen": "2026-01-08T23:54:39.505587"
+  },
+  {
+    "phrase": "Nəoldu",
+    "suspected_category": "unknown",
+    "timestamp": "2026-01-08T23:50:18.107290",
+    "count": 2,
+    "last_seen": "2026-01-08T23:50:31.268191"
+  },
+  {
+    "phrase": "Her şey eladır",
+    "suspected_category": "unknown",
+    "timestamp": "2026-01-08T23:51:32.946616",
+    "count": 1
+  },
+  {
+    "phrase": "Her sey eladir",
+    "suspected_category": "unknown",
+    "timestamp": "2026-01-08T23:51:49.438252",
+    "count": 1
+  },
+  {
+    "phrase": "Təngə",
+    "suspected_category": "unknown",
+    "timestamp": "2026-01-08T23:52:21.553507",
+    "count": 1
+  },
+  {
+    "phrase": "Stresliyem",
+    "suspected_category": "unknown",
+    "timestamp": "2026-01-08T23:57:47.351880",
+    "count": 2,
+    "last_seen": "2026-01-08T23:58:26.659101"
+  },
+  {
+    "original": "👋 Sağ ol",
+    "normalized": "👋 sag ol",
+    "timestamp": "2026-01-09T00:54:36.372439",
+    "count": 1,
+    "rule_exists": false
+  },
+  {
+    "original": "Nə oldu",
+    "normalized": "ne oldu",
+    "timestamp": "2026-01-09T00:58:56.478348",
+    "count": 1,
+    "rule_exists": false
+  },
+  {
+    "original": "nəoldu",
+    "normalized": "neoldu",
+    "timestamp": "2026-01-09T00:59:46.257540",
+    "count": 1,
+    "rule_exists": false
+  },
+  {
+    "original": "Nə oldu niyə yazmırsan",
+    "normalized": "ne oldu niye yazmirsan",
+    "timestamp": "2026-01-09T01:01:41.087164",
+    "count": 1,
+    "rule_exists": false
+  },
+  {
+    "original": "Cındır",
+    "normalized": "cindir",
+    "timestamp": "2026-01-09T01:07:06.365771",
+    "count": 1,
+    "rule_exists": false
   }
 ]
