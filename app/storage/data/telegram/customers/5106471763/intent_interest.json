@@ -1,16 +1,44 @@
 {
-  "current_intent": "support",
-  "interests": [
-    "support",
-    "information"
-  ],
-  "updated_at": "2026-01-09T01:08:01.027747",
-  "last_intent": "complain",
+  "last_intent": "slow_response",
   "intents": [
-    "buy",
-    "complain",
-    "thank",
-    "ask",
-    "greeting"
+    "complaint",
+    "request_info",
+    "price_question",
+    "positive_feedback",
+    "slow_response"
+  ],
+  "conversation_context": {
+    "has_active_complaint": false,
+    "last_question_time": "2026-01-14T03:23:18.271172",
+    "last_positive_message": "2026-01-14T03:24:31.562253",
+    "last_complaint_time": "2026-01-14T03:21:36.835779"
+  },
+  "last_intent_details": {
+    "raw_intent": "slow_response",
+    "final_intent": "slow_response",
+    "goal": "get_faster_response",
+    "pain_points": [
+      "gec_cavab",
+      "vaxt_itkisi"
+    ],
+    "confidence": 0.85,
+    "psychology_mood": "neutral",
+    "psychology_emotional_state": "neutral",
+    "psychology_type": "unknown",
+    "json_rule_used": false,
+    "state_lock_broken": false,
+    "timestamp": "2026-01-14T03:25:26.209318"
+  },
+  "pain_points": [
+    "satisfaction",
+    "price",
+    "gec_cavab",
+    "vaxt_itkisi"
+  ],
+  "current_goal": "get_faster_response",
+  "updated_at": "2026-01-14T03:25:26.133267",
+  "interests": [
+    "price",
+    "quality"
   ]
 }

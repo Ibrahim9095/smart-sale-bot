@@ -1,0 +1,115 @@
+{
+  "_meta": {
+    "description": "EMOTIONAL STATE RULES - HEÇ VAXT 'calm' DEFAULT DEYİL",
+    "version": "1.0",
+    "default_state": "neutral"
+  },
+  
+  "price_negative": {
+    "description": "Qiymət mənfi reaksiya",
+    "keywords": ["baha", "bahadır", "pahalı", "qiymət çox", "çox baha", "satırsınız"],
+    "emotional_state": "dissatisfied",
+    "allowed_moods": ["neutral", "angry", "frustrated", "dissatisfied"],
+    "forbidden_moods": ["happy", "joy", "positive", "satisfied"],
+    "priority": 100
+  },
+  
+  "quality_complaint": {
+    "description": "Keyfiyyət şikayəti",
+    "keywords": ["pis", "bərbad", "keyfiyyətsiz", "kalitesiz", "yaxşı deyil"],
+    "emotional_state": "dissatisfied",
+    "allowed_moods": ["neutral", "angry", "frustrated"],
+    "forbidden_moods": ["happy", "joy"],
+    "priority": 90
+  },
+  
+  "slow_response": {
+    "description": "Gec cavab",
+    "keywords": ["gec", "cavab", "verirsiniz", "niyə gec", "nə oldu", "noldu"],
+    "emotional_state": "frustrated",
+    "allowed_moods": ["neutral", "frustrated", "angry"],
+    "forbidden_moods": ["happy", "calm", "relaxed"],
+    "priority": 85
+  },
+  
+  "accusation": {
+    "description": "İttiham, şübhə",
+    "keywords": ["dələduz", "aldad", "fırıldaq", "yalan", "haqsızlıq", "oğurluq"],
+    "emotional_state": "hostile",
+    "allowed_moods": ["angry", "frustrated", "neutral"],
+    "forbidden_moods": ["happy", "calm", "satisfied"],
+    "priority": 95
+  },
+  
+  "positive_feedback": {
+    "description": "Müsbət rəy",
+    "keywords": ["məmnunam", "yaxşıdır", "gözəldir", "təşəkkür", "sağ ol", "əladır"],
+    "emotional_state": "satisfied",
+    "allowed_moods": ["happy", "satisfied", "neutral"],
+    "forbidden_moods": ["angry", "frustrated", "dissatisfied"],
+    "priority": 80
+  },
+  
+  "urgent_help": {
+    "description": "Təcili kömək",
+    "keywords": ["kömək", "kömək edin", "təcili", "acil", "dərhal"],
+    "emotional_state": "urgent",
+    "allowed_moods": ["neutral", "stressed", "urgent"],
+    "forbidden_moods": ["calm", "relaxed", "happy"],
+    "priority": 88
+  },
+  
+  "thinking": {
+    "description": "Düşüncə",
+    "keywords": ["fikirləşirəm", "düşünürəm", "baxaram", "görüm", "deyim"],
+    "emotional_state": "thinking",
+    "allowed_moods": ["neutral", "thinking", "curious"],
+    "forbidden_moods": ["angry", "frustrated"],
+    "priority": 70
+  },
+  
+  "questioning": {
+    "description": "Sual, sorğu",
+    "keywords": ["necə", "nə", "neçə", "nedir", "hansı", "kim", "niyə", "nece"],
+    "emotional_state": "inquiring",
+    "allowed_moods": ["neutral", "curious", "confused"],
+    "forbidden_moods": ["angry", "frustrated"],
+    "priority": 75
+  },
+  
+  "confirmation": {
+    "description": "Təsdiqləmə",
+    "keywords": ["aydındır", "tamam", "old", "başa düşdüm", "anladım", "ok"],
+    "emotional_state": "relieved",
+    "allowed_moods": ["neutral", "satisfied", "happy"],
+    "forbidden_moods": ["angry", "frustrated"],
+    "priority": 60
+  },
+  
+  "comparison": {
+    "description": "Müqayisə",
+    "keywords": ["digəri", "başqa", "rakiplər", "yaxşıdır", "pisdi"],
+    "emotional_state": "analytical",
+    "allowed_moods": ["neutral", "thinking", "analytical"],
+    "forbidden_moods": ["angry", "emotional"],
+    "priority": 65
+  },
+  
+  "hesitation": {
+    "description": "Tərəddüd",
+    "keywords": ["bəlkə", "ola bilər", "deyə bilmərəm", "tərəddüd", "şübhə"],
+    "emotional_state": "hesitant",
+    "allowed_moods": ["neutral", "confused", "hesitant"],
+    "forbidden_moods": ["confident", "decisive"],
+    "priority": 55
+  },
+  
+  "default_neutral": {
+    "description": "Default neytral",
+    "keywords": [],
+    "emotional_state": "neutral",
+    "allowed_moods": ["neutral", "calm", "unknown"],
+    "forbidden_moods": [],
+    "priority": 10
+  }
+}

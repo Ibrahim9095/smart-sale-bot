@@ -1,19 +1,9 @@
 {
-  "current_mood": "abuse",
-  "emotional_state": "hostile",
-  "last_mood": "stressed",
-  "last_reason": "abuse_phrase: cindir",
-  "last_message_type": "abuse",
-  "operator_required": true,
-  "updated_at": "2026-01-09T01:08:01.027747",
-  "mood": "abuse",
-  "confidence_level": 0.5,
-  "stress_level": 0.0,
-  "anger_level": 0.0,
-  "sadness_level": 0.0,
-  "joy_level": 0.0,
-  "satisfaction_level": 0.0,
-  "energy_level": 0.3,
-  "psychological_state": "normal",
-  "trend": "stable"
+  "current_mood": "neutral",
+  "emotional_state": "neutral",
+  "last_mood": "neutral",
+  "last_reason": "unknown_phrase",
+  "last_message_type": "unknown",
+  "operator_required": false,
+  "updated_at": "2026-01-14T03:25:26.133267"
 }

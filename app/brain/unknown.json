@@ -149,5 +149,179 @@
     "timestamp": "2026-01-09T01:07:06.365771",
     "count": 1,
     "rule_exists": false
+  },
+  {
+    "original": "Əsəbiyəm",
+    "normalized": "esebiyem",
+    "timestamp": "2026-01-09T14:28:52.764630",
+    "count": 1,
+    "rule_exists": false
+  },
+  {
+    "original": "Məhsulumuz çox bərbaddır",
+    "normalized": "mehsulumuz coh berbaddir",
+    "timestamp": "2026-01-09T14:32:41.315310",
+    "count": 1,
+    "rule_exists": false
+  },
+  {
+    "original": "Pulumu geri verin",
+    "normalized": "pulumu geri verin",
+    "timestamp": "2026-01-09T14:58:11.348882",
+    "count": 1,
+    "rule_exists": false
+  },
+  {
+    "original": "Məhsulunuz xoşuma gəldi",
+    "normalized": "mehsulunuz hosuma geldi",
+    "timestamp": "2026-01-09T14:58:54.389288",
+    "count": 1,
+    "rule_exists": false
+  },
+  {
+    "original": "Çox bahadır",
+    "normalized": "coh bahadir",
+    "timestamp": "2026-01-09T15:36:23.433673",
+    "count": 1,
+    "rule_exists": false
+  },
+  {
+    "original": "Məhsullarınız keyfiyyətlidir",
+    "normalized": "mehsullariniz keyfiyyetlidir",
+    "timestamp": "2026-01-09T15:37:24.477281",
+    "count": 1,
+    "rule_exists": false
+  },
+  {
+    "original": "Məni niyə aldatdiniz",
+    "normalized": "meni niye aldatdiniz",
+    "timestamp": "2026-01-09T15:58:52.579169",
+    "count": 1,
+    "rule_exists": false
+  },
+  {
+    "original": "Çox baha satırsınız",
+    "normalized": "coh baha satirsiniz",
+    "timestamp": "2026-01-09T16:03:36.783487",
+    "count": 1,
+    "rule_exists": false
+  },
+  {
+    "original": "Maraqlıdır. Davam edin, dinləyirəm.",
+    "normalized": "maraglidir davam edin dinleyirem",
+    "timestamp": "2026-01-09T17:02:45.633385",
+    "count": 1,
+    "rule_exists": false
+  },
+  {
+    "original": "Ətraflı məlumat üçün minnətdaram",
+    "normalized": "etrafli melumat ucun minnetdaram",
+    "timestamp": "2026-01-09T17:25:52.396123",
+    "count": 1,
+    "rule_exists": false
+  },
+  {
+    "original": "Çox peşmanam",
+    "normalized": "coh pesmanam",
+    "timestamp": "2026-01-09T17:26:05.509149",
+    "count": 1,
+    "rule_exists": false
+  },
+  {
+    "original": "Maraqlıdır",
+    "normalized": "maraglidir",
+    "timestamp": "2026-01-09T17:29:13.374250",
+    "count": 1,
+    "rule_exists": false
+  },
+  {
+    "original": "Keyfiyyət bərbaddır",
+    "normalized": "keyfiyyet berbaddir",
+    "timestamp": "2026-01-09T18:09:59.007271",
+    "count": 1,
+    "rule_exists": false
+  },
+  {
+    "original": "Bilmirəm nə demək istəyirsən",
+    "normalized": "bilmirem ne demek isteyirsen",
+    "timestamp": "2026-01-09T18:09:59.089325",
+    "count": 1,
+    "rule_exists": false
+  },
+  {
+    "original": "Ucuzdur",
+    "normalized": "ucuzdur",
+    "timestamp": "2026-01-09T18:10:49.688217",
+    "count": 1,
+    "rule_exists": false
+  },
+  {
+    "original": "Taha",
+    "normalized": "taha",
+    "timestamp": "2026-01-09T18:12:53.686988",
+    "count": 1,
+    "rule_exists": false
+  },
+  {
+    "original": "Sizi çox təriflədilər dedilər sizdə ucuzluğdu",
+    "normalized": "sizi coh teriflediler dediler sizde ucuzlugdu",
+    "timestamp": "2026-01-11T00:44:13.382113",
+    "count": 1,
+    "rule_exists": false
+  },
+  {
+    "original": "Daha alternativ variant təklif edə bilərsiniz",
+    "normalized": "daha alternativ variant teklif ede bilersiniz",
+    "timestamp": "2026-01-11T00:45:31.050303",
+    "count": 1,
+    "rule_exists": false
+  },
+  {
+    "original": "Rədd ol",
+    "normalized": "redd ol",
+    "timestamp": "2026-01-11T01:15:31.542152",
+    "count": 1,
+    "rule_exists": false
+  },
+  {
+    "original": "Sevindim",
+    "normalized": "sevindim",
+    "timestamp": "2026-01-11T01:16:55.649436",
+    "count": 1,
+    "rule_exists": false
+  },
+  {
+    "original": "Bu məhsul niyə bu qədər bahadır?",
+    "normalized": "bu mehsul niye bu geder bahadir",
+    "timestamp": "2026-01-11T01:21:30.261146",
+    "count": 1,
+    "rule_exists": false
+  },
+  {
+    "phrase": "Çox baha satırsınız",
+    "timestamp": "2026-01-11T01:53:49.783225",
+    "count": 1
+  },
+  {
+    "phrase": "Bu qiymət niyə belə bahadır?",
+    "timestamp": "2026-01-11T01:54:30.780433",
+    "count": 1
+  },
+  {
+    "phrase": "Qiymət nə qədərdir?",
+    "timestamp": "2026-01-11T01:55:03.016759",
+    "count": 1
+  },
+  {
+    "phrase": "Niyə",
+    "timestamp": "2026-01-11T01:55:51.013721",
+    "count": 1
+  },
+  {
+    "original": "📊 Mənim profilim",
+    "normalized": "📊 menim profilim",
+    "timestamp": "2026-01-11T19:43:28.896690",
+    "count": 1,
+    "rule_exists": false
   }
 ]

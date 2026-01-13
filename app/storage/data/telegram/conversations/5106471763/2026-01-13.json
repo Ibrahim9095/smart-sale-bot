@@ -1,0 +1,26 @@
+[
+  {
+    "timestamp": "2026-01-13T17:05:24.314281",
+    "user_message": "Çox bahadır",
+    "bot_response": "Maraqlıdır. Davam edin, dinləyirəm.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-13T17:06:44.839070",
+    "user_message": "Çox pis",
+    "bot_response": "Sakit olun, sizi anlamağa çalışıram.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-13T19:03:03.672651",
+    "user_message": "Çox pis",
+    "bot_response": "Başa düşürəm, narahat olmağınızı. Birlikdə həll edək.",
+    "message_type": "text"
+  },
+  {
+    "timestamp": "2026-01-13T19:03:38.406719",
+    "user_message": "Çox pis",
+    "bot_response": "Narahat olduğunuzu hiss edirəm. Problem nədir?",
+    "message_type": "text"
+  }
+]

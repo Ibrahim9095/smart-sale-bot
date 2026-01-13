@@ -96,9 +96,11 @@
       "əsəblərim pozuldu",
       "hirsliyəm",
       "qızmışam",
-      "pis",
-      "çox pis",
-      "dəhşətli"
+      "dəhşətli",
+      "bəyənmirəm",
+      "əsəbiyəm",
+      "aldatdiniz",
+      "rəd"
     ],
     "effects": {
       "anger": 6.0,
@@ -139,7 +141,8 @@
       "ağlayıram",
       "dağılıram",
       "itirdim",
-      "unudulmuşam"
+      "unudulmuşam",
+      "peşmanam"
     ],
     "effects": {
       "sadness": 5.0,
@@ -152,22 +155,12 @@
     "priority": 8,
     "operator_required": false,
     "phrases": [
-      "stresliyəm",
-      "gərginəm",
       "tələsirəm",
-      "tez",
-      "gec",
-      "gecikdi",
-      "gec cavab",
-      "narahatam",
-      "problem",
-      "çətin",
-      "təngə gəlmişəm",
-      "noldu niye yazmirsan",
-      "nəoldu niyə yazmirsan",
-      "nəoldu niyə yazmirsiniz",
-      "nə oldu",
-      "noldu"
+      "təcili",
+      "vaxtım yoxdur",
+      "çatdırmasanız problem olacaq",
+      "indi lazımdır",
+      "tez olmalıdır"
     ],
     "effects": {
       "stress": 5.0
@@ -190,7 +183,8 @@
       "çox sağ ol",
       "razıyam",
       "məmnunam",
-      "Hər şey əladır"
+      "Hər şey əladır",
+      "xoşuma gəldi"
     ],
     "effects": {
       "joy": 5.0,

@@ -2,6 +2,7 @@
   "lead_score": 100,
   "sales_stage": "warm",
   "conversion_likelihood": 100,
-  "updated_at": "2026-01-09T01:08:01.027747",
-  "sales_potential": "low"
+  "updated_at": "2026-01-14T03:25:26.133267",
+  "sales_potential": "medium",
+  "stage": "warm"
 }

@@ -1,0 +1,77 @@
+{
+  "complaint": {
+    "price": {
+      "phrases": [
+        "baha",
+        "çox baha",
+        "baha satırsınız",
+        "qiymət çox yüksəkdir",
+        "puluna dəyməz",
+        "ucuz deyil",
+        "bahadır",
+        "pahalıdır"
+      ],
+      "pain_points": [
+        "price"
+      ],
+      "goal": "reduce_cost"
+    },
+    "quality": {
+      "phrases": [
+        "keyfiyyətsiz",
+        "pis məhsuldur",
+        "işləmir",
+        "bərbaddır",
+        "pis keyfiyyət",
+        "kalitesiz",
+        "keyfiyyət pisdi"
+      ],
+      "pain_points": [
+        "quality"
+      ],
+      "goal": "improve_quality"
+    },
+    "delivery": {
+      "phrases": [
+        "gec gəldi",
+        "çatdırılma gecikdi",
+        "vaxtında çatmadı",
+        "göndərilmədi"
+      ],
+      "pain_points": [
+        "delivery"
+      ],
+      "goal": "improve_delivery"
+    }
+  },
+  "positive_feedback": {
+    "general": {
+      "phrases": [
+        "məmnunam",
+        "yaxşıdır",
+        "gözəldir",
+        "əladır",
+        "təşəkkür",
+        "sağ ol",
+        "çox yaxşı",
+        "beğəndim"
+      ],
+      "pain_points": [],
+      "goal": "acknowledge_satisfaction"
+    }
+  },
+  "price_question": {
+    "general": {
+      "phrases": [
+        "qiyməti",
+        "bahası",
+        "neçəyədir",
+        "nə qədərdir",
+        "qiymət necə",
+        "bahası necə"
+      ],
+      "pain_points": [],
+      "goal": "get_price_info"
+    }
+  }
+}

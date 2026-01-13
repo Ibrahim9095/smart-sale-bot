@@ -1,0 +1,125 @@
+{
+  "_meta": {
+    "description": "INTENT RULES - BÜTÜN QƏRARLAR BU FAYLDANDIR",
+    "version": "2.0",
+    "default_intent": "request_info"
+  },
+  
+  "complaint": {
+    "price": {
+      "description": "Qiymət şikayəti",
+      "phrases": ["baha", "bahadır", "pahalı", "qiymət çox", "çox baha", "satırsınız", "puluna dəyməz"],
+      "pain_points": ["price"],
+      "goal": "reduce_cost",
+      "priority": 100,
+      "emotional_state_impact": "dissatisfied"
+    },
+    
+    "quality": {
+      "description": "Keyfiyyət şikayəti",
+      "phrases": ["pis", "bərbad", "keyfiyyətsiz", "kalitesiz", "yaxşı deyil"],
+      "pain_points": ["quality"],
+      "goal": "improve_quality",
+      "priority": 90,
+      "emotional_state_impact": "dissatisfied"
+    },
+    
+    "delivery": {
+      "description": "Çatdırılma şikayəti",
+      "phrases": ["gec", "gəlmədi", "çatmadı", "gecikdi", "vaxtında deyil"],
+      "pain_points": ["delivery"],
+      "goal": "improve_delivery",
+      "priority": 85,
+      "emotional_state_impact": "frustrated"
+    }
+  },
+  
+  "positive_feedback": {
+    "general": {
+      "description": "Müsbət rəy",
+      "phrases": ["məmnunam", "yaxşıdır", "gözəldir", "təşəkkür", "sağ ol", "əladır"],
+      "pain_points": [],
+      "goal": "acknowledge_satisfaction",
+      "priority": 80,
+      "emotional_state_impact": "satisfied"
+    }
+  },
+  
+  "price_question": {
+    "general": {
+      "description": "Qiymət sorğusu",
+      "phrases": ["qiymət", "bahası", "neçəyədir", "nə qədərdir", "qiymət necə", "bahası necə"],
+      "pain_points": [],
+      "goal": "get_price_info",
+      "priority": 75,
+      "emotional_state_impact": "curious"
+    }
+  },
+  
+  "request_info": {
+    "general": {
+      "description": "Ümumi məlumat sorğusu",
+      "phrases": ["nədir", "necədir", "hardandır", "necə alım", "nece alım"],
+      "pain_points": [],
+      "goal": "get_information",
+      "priority": 70,
+      "emotional_state_impact": "inquiring"
+    }
+  },
+  
+  "interest": {
+    "general": {
+      "description": "Məhsula maraq",
+      "phrases": ["maraqlıdır", "baxmaq istəyirəm", "göstər", "göstərin", "maraq"],
+      "pain_points": [],
+      "goal": "explore_options",
+      "priority": 65,
+      "emotional_state_impact": "interested"
+    }
+  },
+  
+  "comparison": {
+    "general": {
+      "description": "Müqayisə",
+      "phrases": ["digəri", "başqa", "rakiplər", "yaxşıdır", "pisdi"],
+      "pain_points": [],
+      "goal": "evaluate_alternatives",
+      "priority": 60,
+      "emotional_state_impact": "analytical"
+    }
+  },
+  
+  "confirmation": {
+    "general": {
+      "description": "Təsdiqləmə",
+      "phrases": ["aydındır", "tamam", "old", "başa düşdüm", "anladım", "ok"],
+      "pain_points": [],
+      "goal": "confirm_understanding",
+      "priority": 55,
+      "emotional_state_impact": "relieved"
+    }
+  },
+  
+  "accusation": {
+    "legal": {
+      "description": "Hüquqi ittiham",
+      "phrases": ["dələduz", "aldad", "fırıldaq", "yalan", "haqsızlıq", "oğurluq"],
+      "pain_points": ["trust", "legal"],
+      "goal": "handle_legal_issue",
+      "priority": 95,
+      "emotional_state_impact": "hostile",
+      "operator_required": true
+    }
+  },
+  
+  "slow_response": {
+    "general": {
+      "description": "Gec cavab şikayəti",
+      "phrases": ["gec cavab", "niyə gec", "nə üçün gec", "vaxtında cavab yox"],
+      "pain_points": ["response_time"],
+      "goal": "get_faster_response",
+      "priority": 88,
+      "emotional_state_impact": "frustrated"
+    }
+  }
+}
